@@ -48,4 +48,4 @@ The framework is a closed-loop pipeline with seven stages:
 The case study uses a controlled subset of the MIT lithium-ion cycling dataset (Severson et al., 2019): batch 1, 8 cells, 10 cycles per cell, yielding N = 80 windows. The processed subset is shipped under `data/mit_batch1_final/`.
 
 Since the dataset has no event-level fault labels, seven anomaly archetypes (A1–A7) are injected with controlled operators across voltage, current, temperature, and capacity channels (see Table 2 of the paper).
-![Framework architecture](injected_anomalies_overview (1).png)
+![Injected anomalies overview](injected_anomalies_overview%20(1).png)
