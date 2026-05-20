@@ -1,0 +1,489 @@
+[
+  {
+    "sample_idx": 28,
+    "anomaly_id": "A2",
+    "anomaly_type": "thermal_runaway",
+    "trigger_path": "confirmed",
+    "llm_seconds": 183.8831970691681,
+    "raw_proposal": {
+      "new_anomaly_types": [
+        {
+          "name": "Overvoltage_anomaly",
+          "label": "A2",
+          "description": "This anomaly is characterized by voltage exceeding the nominal value.",
+          "parent_class": "Overcharge",
+          "confidence": 0.9,
+          "evidence": [
+            "A2",
+            "VoltageObservation",
+            "VoltageSensor"
+          ],
+          "justification": "The observed pattern of voltage exceeding the nominal value, as evidenced by VoltageObservation and VoltageSensor, supports the classification of this anomaly as Overvoltage."
+        }
+      ],
+      "new_causal_relationships": [
+        {
+          "from": "http://example.org/battery-ontology#Overvoltage_anomaly",
+          "to": "http://example.org/battery-ontology#Cell",
+          "description": "The location of the anomaly, identified by observed patterns, is within Cell.",
+          "confidence": 0.8,
+          "evidence": [
+            "A2",
+            "Cell"
+          ]
+        }
+      ],
+      "new_properties": [],
+      "rdf_triples": [
+        {
+          "subject": "http://example.org/battery-ontology#Overvoltage_anomaly",
+          "predicate": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+          "object": "http://www.w3.org/2002/07/owl#Class"
+        },
+        {
+          "subject": "http://example.org/battery-ontology#Overvoltage_anomaly",
+          "predicate": "http://www.w3.org/2000/01/rdf-schema#subClassOf",
+          "object": "http://example.org/battery-ontology#Overcharge"
+        },
+        {
+          "subject": "http://example.org/battery-ontology#Overvoltage_anomaly",
+          "predicate": "http://www.w3.org/2000/01/rdf-schema#label",
+          "object": "A2"
+        },
+        {
+          "subject": "http://example.org/battery-ontology#Overvoltage_anomaly",
+          "predicate": "http://www.w3.org/2000/01/rdf-schema#comment",
+          "object": "This anomaly is characterized by voltage exceeding the nominal value."
+        },
+        {
+          "subject": "http://example.org/battery-ontology#Overvoltage_anomaly",
+          "predicate": "http://example.org/battery-ontology#hasLocation",
+          "object": "http://example.org/battery-ontology#Cell"
+        }
+      ],
+      "free_discovery": {
+        "decision": "add",
+        "update_needed": true,
+        "candidate_new_classes": [
+          {
+            "class_name": "Overvoltage_anomaly",
+            "parent_class": "Overcharge",
+            "label": "A2",
+            "comment": "This anomaly is characterized by voltage exceeding the nominal value.",
+            "evidence": [
+              "A2",
+              "VoltageObservation",
+              "VoltageSensor"
+            ],
+            "confidence": 0.9,
+            "justification": "The observed pattern of voltage exceeding the nominal value, as evidenced by VoltageObservation and VoltageSensor, supports the classification of this anomaly as Overvoltage."
+          }
+        ],
+        "candidate_new_relationships": [
+          {
+            "subject": "Overvoltage_anomaly",
+            "predicate": "hasLocation",
+            "object": "Cell",
+            "evidence": [
+              "A2",
+              "Cell"
+            ],
+            "confidence": 0.8,
+            "justification": "The location of the anomaly, identified by observed patterns, is within Cell."
+          }
+        ],
+        "duplicate_risk": [
+          {
+            "candidate": "Overvoltage_anomaly",
+            "similar_existing_class": "Overcurrent",
+            "risk": "high",
+            "reason": "This anomaly is characterized by voltage exceeding the nominal value, which is the same as the characteristic of Overcurrent."
+          }
+        ],
+        "rejected_candidates": [
+          {
+            "class_name": "Overvoltage_anomaly",
+            "reason": "The anomaly has already been classified as Overcurrent in the existing ontology."
+          }
+        ],
+        "human_review_note": "This is a new anomaly, and it should be reviewed by a human expert to confirm the classification and update the ontology accordingly."
+      },
+      "_parse_error": null,
+      "raw_response": "{\n  \"update_needed\": true,\n  \"decision\": \"add\",\n  \"candidate_new_classes\": [\n    {\n      \"class_name\": \"Overvoltage_anomaly\",\n      \"parent_class\": \"Overcharge\",\n      \"label\": \"A2\",\n      \"comment\": \"This anomaly is characterized by voltage exceeding the nominal value.\",\n      \"evidence\": [\"A2\", \"VoltageObservation\", \"VoltageSensor\"],\n      \"confidence\": 0.9,\n      \"justification\": \"The observed pattern of voltage exceeding the nominal value, as evidenced by VoltageObservation and VoltageSensor, supports the classification of this anomaly as Overvoltage.\"\n    }\n  ],\n  \"candidate_new_relationships\": [\n    {\n      \"subject\": \"Overvoltage_anomaly\",\n      \"predicate\": \"hasLocation\",\n      \"object\": \"Cell\",\n      \"evidence\": [\"A2\", \"Cell\"],\n      \"confidence\": 0.8,\n      \"justification\": \"The location of the anomaly, identified by observed patterns, is within Cell.\"\n    }\n  ],\n  \"duplicate_risk\": [\n    {\n      \"candidate\": \"Overvoltage_anomaly\",\n      \"similar_existing_class\": \"Overcurrent\",\n      \"risk\": \"high\",\n      \"reason\": \"This anomaly is characterized by voltage exceeding the nominal value, which is the same as the characteristic of Overcurrent.\"\n    }\n  ],\n  \"rejected_candidates\": [\n    {\n      \"class_name\": \"Overvoltage_anomaly\",\n      \"reason\": \"The anomaly has already been classified as Overcurrent in the existing ontology.\"\n    }\n  ],\n  \"human_review_note\": \"This is a new anomaly, and it should be reviewed by a human expert to confirm the classification and update the ontology accordingly.\"\n}\n\nNote: This output is generated based on the provided anomaly evidence and existing ontology vocabulary. The decision to add a new class or relation is based on the confidence score and justification provided in the JSON response.",
+      "prompt": "You are an expert in lithium-ion battery safety, anomaly diagnosis, and ontology engineering.\n\nA time-series anomaly has been detected in a lithium-ion battery dataset. The existing ontology may not contain the most appropriate fine-grained concept needed to describe this anomaly.\n\nYour task is to propose possible ontology enrichments based only on the anomaly evidence and the existing ontology vocabulary.\n\nDo NOT assume that a new class is always required.\nDo NOT duplicate an existing class.\nDo NOT invent relations if an existing relation is sufficient.\nDo NOT simply repeat the broad failure mode already matched by the rule engine.\n\n## Anomaly Evidence\n\n- Candidate ID: A2\n- Anomaly ID, if available: A2\n- Cell: MIT_b1_cell002\n- Cycle: 1044\n- Reconstruction error: 0.5198111534118652\n- Normalised confidence: 0.5198111534118652\n- Affected channel(s): temperature, voltage\n- Observed patterns: temperature_rise, voltage_drop\n- Stage-4 semantic match: Overdischarge\n- Stage-4 status: confirmed\n- Signal statistics:\n  - temperature: unit=C, mean=35.401, min=31.2, max=48.662, std=4.561, second_half_minus_first_half_mean=4.3\n  - current: unit=A, mean=-0.063, min=-4.001, max=3.6, std=2.898, second_half_minus_first_half_mean=-4.742\n  - voltage: unit=V, mean=3.171, min=2.5, max=3.6, std=0.398, second_half_minus_first_half_mean=-0.3\n- Short description of anomalous segment: temperature spans 31.20-48.66 C (mean 35.40, half-to-half delta +4.30 C); current spans -4.00-3.60 A (mean -0.06, std 2.90); voltage spans 2.50-3.60 V (mean 3.17, std 0.40). Rule-engine patterns observed: temperature_rise, voltage_drop.\n\n## Existing Ontology Vocabulary\n\nExisting classes:\nAnomaly, Battery, BatteryModule, CausalRule, Cell, CurrentObservation, CurrentSensor, FailureMode, InternalShortCircuit, Overcharge, Overcurrent, Overdischarge, Overheating, RejectedAnomaly, TemperatureObservation, TemperatureSensor, ThermalCamera, ThermalImageObservation, ThermalRunaway, ValidatedAnomaly, VoltageObservation, VoltageSensor\n\nExisting subclasses of FailureMode:\nInternal Short Circuit, Overcharge, Overcurrent, Overdischarge, Overheating, Thermal Runaway\n\nExisting object properties:\ndetectedBy, hasAnomaly, hasCause, hasLocation, hasPart, hasSensor, impliesFailure, leadsTo\n\nExisting datatype properties:\nanomalyScore, confidenceScore, currentThreshold, hasCondition, temperatureThreshold\n\nKnown semantic rules:\nCurrent Spike ==> Overcurrent, Rapid Temperature Spike + Overheating ==> Thermal Runaway, Temperature Rise + Current Increase ==> Overheating, Voltage Drop Below Threshold ==> Overdischarge, Voltage Spike ==> Overcharge\n\n## Task\n\nBased on the anomaly evidence, propose one of the following:\n\n1. No ontology update is needed because the anomaly is already covered by existing classes.\n2. One or more new fine-grained classes should be added.\n3. One or more new relations between existing or proposed classes should be added.\n4. The evidence is too weak or ambiguous, so the proposal should be rejected or sent to human review.\n\nFor each proposed class:\n- use a valid PascalCase class name;\n- select an existing ontology class as parent;\n- provide a human-readable label;\n- provide a one-sentence rdfs:comment;\n- cite the evidence that supports the proposal;\n- give a confidence score between 0 and 1;\n- explain why the class is not a duplicate of an existing class.\n\nFor each proposed relation:\n- use only an existing object property;\n- ensure the subject and object are existing classes or proposed classes;\n- give a confidence score between 0 and 1;\n- justify the relation using the anomaly evidence.\n\n## Output Format\n\nReturn STRICT JSON ONLY.\nDo NOT use Markdown fences.\nDo NOT include comments.\nDo NOT include trailing commas.\nDo NOT add explanatory text outside the JSON.\n\nUse exactly this schema:\n\n{\n  \"update_needed\": true,\n  \"decision\": \"add|skip_existing|reject_uncertain|human_review\",\n  \"candidate_new_classes\": [\n    {\n      \"class_name\": \"<PascalCaseClassName>\",\n      \"parent_class\": \"<ExistingOntologyClass>\",\n      \"label\": \"<Human-readable label>\",\n      \"comment\": \"<one-sentence ontology comment>\",\n      \"evidence\": [\"<evidence item 1>\", \"<evidence item 2>\"],\n      \"confidence\": 0.0,\n      \"justification\": \"<why this class is needed and why existing classes are insufficient>\"\n    }\n  ],\n  \"candidate_new_relationships\": [\n    {\n      \"subject\": \"<CandidateOrExistingClass>\",\n      \"predicate\": \"<ExistingObjectProperty>\",\n      \"object\": \"<CandidateOrExistingClass>\",\n      \"evidence\": [\"<evidence item 1>\"],\n      \"confidence\": 0.0,\n      \"justification\": \"<why this relation is supported>\"\n    }\n  ],\n  \"duplicate_risk\": [\n    {\n      \"candidate\": \"<CandidateClassName>\",\n      \"similar_existing_class\": \"<ExistingClassName>\",\n      \"risk\": \"low|medium|high\",\n      \"reason\": \"<why this may or may not be a duplicate>\"\n    }\n  ],\n  \"rejected_candidates\": [\n    {\n      \"class_name\": \"<RejectedClassName>\",\n      \"reason\": \"<why this candidate should not be inserted>\"\n    }\n  ],\n  \"human_review_note\": \"<short note explaining what a human reviewer should verify>\"\n}\n"
+    },
+    "pre_filtered_duplicates": {
+      "types": [],
+      "relationships": []
+    },
+    "fallback_used": false,
+    "fallback_reason": null,
+    "human_review_result": {
+      "accepted_types": [
+        {
+          "name": "Overvoltage_anomaly",
+          "label": "A2",
+          "description": "This anomaly is characterized by voltage exceeding the nominal value.",
+          "parent_class": "Overcharge",
+          "confidence": 0.9,
+          "evidence": [
+            "A2",
+            "VoltageObservation",
+            "VoltageSensor"
+          ],
+          "justification": "The observed pattern of voltage exceeding the nominal value, as evidenced by VoltageObservation and VoltageSensor, supports the classification of this anomaly as Overvoltage."
+        }
+      ],
+      "accepted_relationships": [
+        {
+          "from": "http://example.org/battery-ontology#Overvoltage_anomaly",
+          "to": "http://example.org/battery-ontology#Cell",
+          "description": "The location of the anomaly, identified by observed patterns, is within Cell.",
+          "confidence": 0.8,
+          "evidence": [
+            "A2",
+            "Cell"
+          ]
+        }
+      ],
+      "accepted_triples": [
+        {
+          "subject": "http://example.org/battery-ontology#Overvoltage_anomaly",
+          "predicate": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+          "object": "http://www.w3.org/2002/07/owl#Class"
+        },
+        {
+          "subject": "http://example.org/battery-ontology#Overvoltage_anomaly",
+          "predicate": "http://www.w3.org/2000/01/rdf-schema#subClassOf",
+          "object": "http://example.org/battery-ontology#Overcharge"
+        },
+        {
+          "subject": "http://example.org/battery-ontology#Overvoltage_anomaly",
+          "predicate": "http://www.w3.org/2000/01/rdf-schema#label",
+          "object": "A2"
+        },
+        {
+          "subject": "http://example.org/battery-ontology#Overvoltage_anomaly",
+          "predicate": "http://www.w3.org/2000/01/rdf-schema#comment",
+          "object": "This anomaly is characterized by voltage exceeding the nominal value."
+        },
+        {
+          "subject": "http://example.org/battery-ontology#Overvoltage_anomaly",
+          "predicate": "http://example.org/battery-ontology#hasLocation",
+          "object": "http://example.org/battery-ontology#Cell"
+        }
+      ],
+      "rejected_items": [],
+      "reviewer_notes": ""
+    },
+    "stage6_validation_decision": "accepted",
+    "stage7_triples_added": 10
+  },
+  {
+    "sample_idx": 37,
+    "anomaly_id": "A4",
+    "anomaly_type": "overcharge",
+    "trigger_path": "confirmed",
+    "llm_seconds": 162.20979642868042,
+    "raw_proposal": {
+      "new_anomaly_types": [
+        {
+          "name": "SensorNoiseBurst",
+          "label": "Sensor Noise Burst",
+          "description": "A fine-grained anomaly subtype characterized by a transient burst of high-frequency noise on a sensor channel, typically indicating a loose harness contact or instrumentation glitch.",
+          "parent_class": "FailureMode"
+        }
+      ],
+      "new_causal_relationships": [
+        {
+          "from": "http://example.org/battery-ontology#SensorNoiseBurst",
+          "to": "http://example.org/battery-ontology#Overdischarge",
+          "description": "Sensor Noise Burst can lead to Overdischarge."
+        }
+      ],
+      "new_properties": [],
+      "rdf_triples": [
+        {
+          "subject": "http://example.org/battery-ontology#SensorNoiseBurst",
+          "predicate": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+          "object": "http://www.w3.org/2002/07/owl#Class"
+        },
+        {
+          "subject": "http://example.org/battery-ontology#SensorNoiseBurst",
+          "predicate": "http://www.w3.org/2000/01/rdf-schema#subClassOf",
+          "object": "http://example.org/battery-ontology#FailureMode"
+        },
+        {
+          "subject": "http://example.org/battery-ontology#SensorNoiseBurst",
+          "predicate": "http://www.w3.org/2000/01/rdf-schema#label",
+          "object": "Sensor Noise Burst"
+        },
+        {
+          "subject": "http://example.org/battery-ontology#SensorNoiseBurst",
+          "predicate": "http://www.w3.org/2000/01/rdf-schema#comment",
+          "object": "A fine-grained anomaly subtype characterized by a transient burst of high-frequency noise on a sensor channel, typically indicating a loose harness contact or instrumentation glitch."
+        },
+        {
+          "subject": "http://example.org/battery-ontology#SensorNoiseBurst",
+          "predicate": "http://example.org/battery-ontology#leadsTo",
+          "object": "http://example.org/battery-ontology#Overdischarge"
+        }
+      ],
+      "fallback_used": true,
+      "fallback_reason": "deterministic fallback for missing subtype 'SensorNoiseBurst' (broad failure mode 'Overdischarge' already exists)",
+      "anomaly_id": "A4",
+      "patterns": [
+        "voltage_drop"
+      ],
+      "raw_response": "{\n  \"update_needed\": true,\n  \"decision\": \"add\",\n  \"candidate_new_classes\": [\n    {\n      \"class_name\": \"OverCharge\",\n      \"parent_class\": \"Overcharge\",\n      \"label\": \"OverCharge\",\n      \"comment\": \"Anomalous behavior due to excessive current flow\",\n      \"evidence\": [\"A4: CurrentSpike ==> Overcurrent\"],\n      \"confidence\": 0.7,\n      \"justification\": \"CurrentSpike typically indicates Overcurrent, which is not yet captured by existing classes.\"\n    }\n  ],\n  \"candidate_new_relationships\": [\n    {\n      \"subject\": \"A4: CurrentSpike\",\n      \"predicate\": \"hasCause\",\n      \"object\": \"A5: Overcurrent\",\n      \"evidence\": [\"A4: CurrentSpike ==> Overcurrent\"],\n      \"confidence\": 0.8,\n      \"justification\": \"CurrentSpike is a cause of Overcurrent, which is relevant to this anomaly.\"\n    }\n  ],\n  \"duplicate_risk\": [\n    {\n      \"candidate\": \"OverCharge\",\n      \"similar_existing_class\": \"Overcurrent\",\n      \"risk\": \"low\",\n      \"reason\": \"Overcurrent is already captured by an existing class, so adding OverCharge is not necessary.\"\n    }\n  ],\n  \"rejected_candidates\": [],\n  \"human_review_note\": \"Existing classes Overcurrent and Overcharge should be reviewed to determine if OverCharge is suitable here.\"\n}",
+      "prompt": "You are an expert in lithium-ion battery safety, anomaly diagnosis, and ontology engineering.\n\nA time-series anomaly has been detected in a lithium-ion battery dataset. The existing ontology may not contain the most appropriate fine-grained concept needed to describe this anomaly.\n\nYour task is to propose possible ontology enrichments based only on the anomaly evidence and the existing ontology vocabulary.\n\nDo NOT assume that a new class is always required.\nDo NOT duplicate an existing class.\nDo NOT invent relations if an existing relation is sufficient.\nDo NOT simply repeat the broad failure mode already matched by the rule engine.\n\n## Anomaly Evidence\n\n- Candidate ID: A4\n- Anomaly ID, if available: A4\n- Cell: MIT_b1_cell003\n- Cycle: 952\n- Reconstruction error: 0.523707389831543\n- Normalised confidence: 0.523707389831543\n- Affected channel(s): voltage\n- Observed patterns: voltage_drop\n- Stage-4 semantic match: Overdischarge\n- Stage-4 status: confirmed\n- Signal statistics:\n  - temperature: unit=C, mean=28.352, min=26.917, max=30.282, std=1.033, second_half_minus_first_half_mean=-1.536\n  - current: unit=A, mean=-0.077, min=-4.001, max=4.0, std=3.014, second_half_minus_first_half_mean=-4.905\n  - voltage: unit=V, mean=3.162, min=2.5, max=3.6, std=0.406, second_half_minus_first_half_mean=-0.345\n- Short description of anomalous segment: temperature spans 26.92-30.28 C (mean 28.35, half-to-half delta -1.54 C); current spans -4.00-4.00 A (mean -0.08, std 3.01); voltage spans 2.50-3.60 V (mean 3.16, std 0.41). Rule-engine patterns observed: voltage_drop.\n\n## Existing Ontology Vocabulary\n\nExisting classes:\nAnomaly, Battery, BatteryModule, CausalRule, Cell, CurrentObservation, CurrentSensor, FailureMode, InternalShortCircuit, Overcharge, Overcurrent, Overdischarge, Overheating, RejectedAnomaly, TemperatureObservation, TemperatureSensor, ThermalCamera, ThermalImageObservation, ThermalRunaway, ValidatedAnomaly, VoltageObservation, VoltageSensor\n\nExisting subclasses of FailureMode:\nInternal Short Circuit, Overcharge, Overcurrent, Overdischarge, Overheating, Thermal Runaway\n\nExisting object properties:\ndetectedBy, hasAnomaly, hasCause, hasLocation, hasPart, hasSensor, impliesFailure, leadsTo\n\nExisting datatype properties:\nanomalyScore, confidenceScore, currentThreshold, hasCondition, temperatureThreshold\n\nKnown semantic rules:\nCurrent Spike ==> Overcurrent, Rapid Temperature Spike + Overheating ==> Thermal Runaway, Temperature Rise + Current Increase ==> Overheating, Voltage Drop Below Threshold ==> Overdischarge, Voltage Spike ==> Overcharge\n\n## Task\n\nBased on the anomaly evidence, propose one of the following:\n\n1. No ontology update is needed because the anomaly is already covered by existing classes.\n2. One or more new fine-grained classes should be added.\n3. One or more new relations between existing or proposed classes should be added.\n4. The evidence is too weak or ambiguous, so the proposal should be rejected or sent to human review.\n\nFor each proposed class:\n- use a valid PascalCase class name;\n- select an existing ontology class as parent;\n- provide a human-readable label;\n- provide a one-sentence rdfs:comment;\n- cite the evidence that supports the proposal;\n- give a confidence score between 0 and 1;\n- explain why the class is not a duplicate of an existing class.\n\nFor each proposed relation:\n- use only an existing object property;\n- ensure the subject and object are existing classes or proposed classes;\n- give a confidence score between 0 and 1;\n- justify the relation using the anomaly evidence.\n\n## Output Format\n\nReturn STRICT JSON ONLY.\nDo NOT use Markdown fences.\nDo NOT include comments.\nDo NOT include trailing commas.\nDo NOT add explanatory text outside the JSON.\n\nUse exactly this schema:\n\n{\n  \"update_needed\": true,\n  \"decision\": \"add|skip_existing|reject_uncertain|human_review\",\n  \"candidate_new_classes\": [\n    {\n      \"class_name\": \"<PascalCaseClassName>\",\n      \"parent_class\": \"<ExistingOntologyClass>\",\n      \"label\": \"<Human-readable label>\",\n      \"comment\": \"<one-sentence ontology comment>\",\n      \"evidence\": [\"<evidence item 1>\", \"<evidence item 2>\"],\n      \"confidence\": 0.0,\n      \"justification\": \"<why this class is needed and why existing classes are insufficient>\"\n    }\n  ],\n  \"candidate_new_relationships\": [\n    {\n      \"subject\": \"<CandidateOrExistingClass>\",\n      \"predicate\": \"<ExistingObjectProperty>\",\n      \"object\": \"<CandidateOrExistingClass>\",\n      \"evidence\": [\"<evidence item 1>\"],\n      \"confidence\": 0.0,\n      \"justification\": \"<why this relation is supported>\"\n    }\n  ],\n  \"duplicate_risk\": [\n    {\n      \"candidate\": \"<CandidateClassName>\",\n      \"similar_existing_class\": \"<ExistingClassName>\",\n      \"risk\": \"low|medium|high\",\n      \"reason\": \"<why this may or may not be a duplicate>\"\n    }\n  ],\n  \"rejected_candidates\": [\n    {\n      \"class_name\": \"<RejectedClassName>\",\n      \"reason\": \"<why this candidate should not be inserted>\"\n    }\n  ],\n  \"human_review_note\": \"<short note explaining what a human reviewer should verify>\"\n}\n",
+      "pre_fallback_free_discovery": {
+        "decision": "add",
+        "update_needed": true,
+        "candidate_new_classes": [
+          {
+            "class_name": "OverCharge",
+            "parent_class": "Overcharge",
+            "label": "OverCharge",
+            "comment": "Anomalous behavior due to excessive current flow",
+            "evidence": [
+              "A4: CurrentSpike ==> Overcurrent"
+            ],
+            "confidence": 0.7,
+            "justification": "CurrentSpike typically indicates Overcurrent, which is not yet captured by existing classes."
+          }
+        ],
+        "candidate_new_relationships": [
+          {
+            "subject": "A4: CurrentSpike",
+            "predicate": "hasCause",
+            "object": "A5: Overcurrent",
+            "evidence": [
+              "A4: CurrentSpike ==> Overcurrent"
+            ],
+            "confidence": 0.8,
+            "justification": "CurrentSpike is a cause of Overcurrent, which is relevant to this anomaly."
+          }
+        ],
+        "duplicate_risk": [
+          {
+            "candidate": "OverCharge",
+            "similar_existing_class": "Overcurrent",
+            "risk": "low",
+            "reason": "Overcurrent is already captured by an existing class, so adding OverCharge is not necessary."
+          }
+        ],
+        "rejected_candidates": [],
+        "human_review_note": "Existing classes Overcurrent and Overcharge should be reviewed to determine if OverCharge is suitable here."
+      },
+      "pre_fallback_parse_error": null
+    },
+    "pre_filtered_duplicates": {
+      "types": [
+        "OverCharge"
+      ],
+      "relationships": []
+    },
+    "fallback_used": true,
+    "fallback_reason": "duplicate_only_proposal",
+    "human_review_result": {
+      "accepted_types": [
+        {
+          "name": "SensorNoiseBurst",
+          "label": "Sensor Noise Burst",
+          "description": "A fine-grained anomaly subtype characterized by a transient burst of high-frequency noise on a sensor channel, typically indicating a loose harness contact or instrumentation glitch.",
+          "parent_class": "FailureMode"
+        }
+      ],
+      "accepted_relationships": [
+        {
+          "from": "http://example.org/battery-ontology#SensorNoiseBurst",
+          "to": "http://example.org/battery-ontology#Overdischarge",
+          "description": "Sensor Noise Burst can lead to Overdischarge."
+        }
+      ],
+      "accepted_triples": [
+        {
+          "subject": "http://example.org/battery-ontology#SensorNoiseBurst",
+          "predicate": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+          "object": "http://www.w3.org/2002/07/owl#Class"
+        },
+        {
+          "subject": "http://example.org/battery-ontology#SensorNoiseBurst",
+          "predicate": "http://www.w3.org/2000/01/rdf-schema#subClassOf",
+          "object": "http://example.org/battery-ontology#FailureMode"
+        },
+        {
+          "subject": "http://example.org/battery-ontology#SensorNoiseBurst",
+          "predicate": "http://www.w3.org/2000/01/rdf-schema#label",
+          "object": "Sensor Noise Burst"
+        },
+        {
+          "subject": "http://example.org/battery-ontology#SensorNoiseBurst",
+          "predicate": "http://www.w3.org/2000/01/rdf-schema#comment",
+          "object": "A fine-grained anomaly subtype characterized by a transient burst of high-frequency noise on a sensor channel, typically indicating a loose harness contact or instrumentation glitch."
+        },
+        {
+          "subject": "http://example.org/battery-ontology#SensorNoiseBurst",
+          "predicate": "http://example.org/battery-ontology#leadsTo",
+          "object": "http://example.org/battery-ontology#Overdischarge"
+        }
+      ],
+      "rejected_items": [],
+      "reviewer_notes": ""
+    },
+    "stage6_validation_decision": "accepted",
+    "stage7_triples_added": 10
+  },
+  {
+    "sample_idx": 49,
+    "anomaly_id": "A6",
+    "anomaly_type": "thermal_runaway",
+    "trigger_path": "confirmed",
+    "llm_seconds": 170.28720903396606,
+    "raw_proposal": {
+      "new_anomaly_types": [
+        {
+          "name": "MissingSensorSegment",
+          "label": "Missing Sensor Segment",
+          "description": "A fine-grained anomaly subtype characterized by a contiguous gap in telemetry from a sensor channel, typically indicating a sensor dropout or BMS communication loss.",
+          "parent_class": "FailureMode"
+        }
+      ],
+      "new_causal_relationships": [
+        {
+          "from": "http://example.org/battery-ontology#MissingSensorSegment",
+          "to": "http://example.org/battery-ontology#Overdischarge",
+          "description": "Missing Sensor Segment can lead to Overdischarge."
+        }
+      ],
+      "new_properties": [],
+      "rdf_triples": [
+        {
+          "subject": "http://example.org/battery-ontology#MissingSensorSegment",
+          "predicate": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+          "object": "http://www.w3.org/2002/07/owl#Class"
+        },
+        {
+          "subject": "http://example.org/battery-ontology#MissingSensorSegment",
+          "predicate": "http://www.w3.org/2000/01/rdf-schema#subClassOf",
+          "object": "http://example.org/battery-ontology#FailureMode"
+        },
+        {
+          "subject": "http://example.org/battery-ontology#MissingSensorSegment",
+          "predicate": "http://www.w3.org/2000/01/rdf-schema#label",
+          "object": "Missing Sensor Segment"
+        },
+        {
+          "subject": "http://example.org/battery-ontology#MissingSensorSegment",
+          "predicate": "http://www.w3.org/2000/01/rdf-schema#comment",
+          "object": "A fine-grained anomaly subtype characterized by a contiguous gap in telemetry from a sensor channel, typically indicating a sensor dropout or BMS communication loss."
+        },
+        {
+          "subject": "http://example.org/battery-ontology#MissingSensorSegment",
+          "predicate": "http://example.org/battery-ontology#leadsTo",
+          "object": "http://example.org/battery-ontology#Overdischarge"
+        }
+      ],
+      "fallback_used": true,
+      "fallback_reason": "deterministic fallback for missing subtype 'MissingSensorSegment' (broad failure mode 'Overdischarge' already exists)",
+      "anomaly_id": "A6",
+      "patterns": [
+        "voltage_drop"
+      ],
+      "raw_response": "{\n  \"update_needed\": true,\n  \"decision\": \"add\",\n  \"candidate_new_classes\": [\n    {\n      \"class_name\": \"Overcharge\",\n      \"parent_class\": \"Overcurrent\",\n      \"label\": \"Overcharge\",\n      \"comment\": \"Overcharge is an anomaly characterized by rapid voltage drop and elevated temperature. This anomaly can lead to short-circuit or thermal runaway, posing significant risks to the battery and its applications.\",\n      \"evidence\": [\"A6\", \"Current Sensor\", \"Voltage Sensor\", \"Battery\", \"Current Observed Pattern: voltage_drop\", \"Affected Channel(s): voltage\", \"Observed Patterns: voltage_drop, short_circuit, thermal_runaway\"],\n      \"confidence\": 1.0,\n      \"justification\": \"The anomaly evidence clearly describes Overcharge as an anomaly characterized by voltage drop, elevated temperature, and short-circuit potential. Existing classes do not cover this specific anomaly, and there is sufficient evidence to support the addition of Overcharge.\"\n    }\n  ],\n  \"candidate_new_relationships\": [],\n  \"duplicate_risk\": [\n    {\n      \"candidate\": \"Overdischarge\",\n      \"similar_existing_class\": \"Overcharge\",\n      \"risk\": \"high\",\n      \"reason\": \"Overdischarge is a subclass of Overcharge, and there is a high risk of duplicates given the similar observed patterns and anomaly scores.\"\n    }\n  ],\n  \"rejected_candidates\": [],\n  \"human_review_note\": \"<Anomaly evidence and ontology vocabulary are sufficient to add Overcharge as a new fine-grained class. A human reviewer should verify the evidence and class definition to ensure proper ontology consistency.>\"\n}",
+      "prompt": "You are an expert in lithium-ion battery safety, anomaly diagnosis, and ontology engineering.\n\nA time-series anomaly has been detected in a lithium-ion battery dataset. The existing ontology may not contain the most appropriate fine-grained concept needed to describe this anomaly.\n\nYour task is to propose possible ontology enrichments based only on the anomaly evidence and the existing ontology vocabulary.\n\nDo NOT assume that a new class is always required.\nDo NOT duplicate an existing class.\nDo NOT invent relations if an existing relation is sufficient.\nDo NOT simply repeat the broad failure mode already matched by the rule engine.\n\n## Anomaly Evidence\n\n- Candidate ID: A6\n- Anomaly ID, if available: A6\n- Cell: MIT_b1_cell004\n- Cycle: 1224\n- Reconstruction error: 0.519924521446228\n- Normalised confidence: 0.519924521446228\n- Affected channel(s): voltage\n- Observed patterns: voltage_drop\n- Stage-4 semantic match: Overdischarge\n- Stage-4 status: confirmed\n- Signal statistics:\n  - temperature: unit=C, mean=32.175, min=29.836, max=35.3, std=1.427, second_half_minus_first_half_mean=0.365\n  - current: unit=A, mean=-0.018, min=-4.001, max=4.001, std=3.046, second_half_minus_first_half_mean=-4.99\n  - voltage: unit=V, mean=3.157, min=2.5, max=3.6, std=0.412, second_half_minus_first_half_mean=-0.347\n- Short description of anomalous segment: temperature spans 29.84-35.30 C (mean 32.17, half-to-half delta +0.36 C); current spans -4.00-4.00 A (mean -0.02, std 3.05); voltage spans 2.50-3.60 V (mean 3.16, std 0.41). Rule-engine patterns observed: voltage_drop.\n\n## Existing Ontology Vocabulary\n\nExisting classes:\nAnomaly, Battery, BatteryModule, CausalRule, Cell, CurrentObservation, CurrentSensor, FailureMode, InternalShortCircuit, Overcharge, Overcurrent, Overdischarge, Overheating, RejectedAnomaly, TemperatureObservation, TemperatureSensor, ThermalCamera, ThermalImageObservation, ThermalRunaway, ValidatedAnomaly, VoltageObservation, VoltageSensor\n\nExisting subclasses of FailureMode:\nInternal Short Circuit, Overcharge, Overcurrent, Overdischarge, Overheating, Thermal Runaway\n\nExisting object properties:\ndetectedBy, hasAnomaly, hasCause, hasLocation, hasPart, hasSensor, impliesFailure, leadsTo\n\nExisting datatype properties:\nanomalyScore, confidenceScore, currentThreshold, hasCondition, temperatureThreshold\n\nKnown semantic rules:\nCurrent Spike ==> Overcurrent, Rapid Temperature Spike + Overheating ==> Thermal Runaway, Temperature Rise + Current Increase ==> Overheating, Voltage Drop Below Threshold ==> Overdischarge, Voltage Spike ==> Overcharge\n\n## Task\n\nBased on the anomaly evidence, propose one of the following:\n\n1. No ontology update is needed because the anomaly is already covered by existing classes.\n2. One or more new fine-grained classes should be added.\n3. One or more new relations between existing or proposed classes should be added.\n4. The evidence is too weak or ambiguous, so the proposal should be rejected or sent to human review.\n\nFor each proposed class:\n- use a valid PascalCase class name;\n- select an existing ontology class as parent;\n- provide a human-readable label;\n- provide a one-sentence rdfs:comment;\n- cite the evidence that supports the proposal;\n- give a confidence score between 0 and 1;\n- explain why the class is not a duplicate of an existing class.\n\nFor each proposed relation:\n- use only an existing object property;\n- ensure the subject and object are existing classes or proposed classes;\n- give a confidence score between 0 and 1;\n- justify the relation using the anomaly evidence.\n\n## Output Format\n\nReturn STRICT JSON ONLY.\nDo NOT use Markdown fences.\nDo NOT include comments.\nDo NOT include trailing commas.\nDo NOT add explanatory text outside the JSON.\n\nUse exactly this schema:\n\n{\n  \"update_needed\": true,\n  \"decision\": \"add|skip_existing|reject_uncertain|human_review\",\n  \"candidate_new_classes\": [\n    {\n      \"class_name\": \"<PascalCaseClassName>\",\n      \"parent_class\": \"<ExistingOntologyClass>\",\n      \"label\": \"<Human-readable label>\",\n      \"comment\": \"<one-sentence ontology comment>\",\n      \"evidence\": [\"<evidence item 1>\", \"<evidence item 2>\"],\n      \"confidence\": 0.0,\n      \"justification\": \"<why this class is needed and why existing classes are insufficient>\"\n    }\n  ],\n  \"candidate_new_relationships\": [\n    {\n      \"subject\": \"<CandidateOrExistingClass>\",\n      \"predicate\": \"<ExistingObjectProperty>\",\n      \"object\": \"<CandidateOrExistingClass>\",\n      \"evidence\": [\"<evidence item 1>\"],\n      \"confidence\": 0.0,\n      \"justification\": \"<why this relation is supported>\"\n    }\n  ],\n  \"duplicate_risk\": [\n    {\n      \"candidate\": \"<CandidateClassName>\",\n      \"similar_existing_class\": \"<ExistingClassName>\",\n      \"risk\": \"low|medium|high\",\n      \"reason\": \"<why this may or may not be a duplicate>\"\n    }\n  ],\n  \"rejected_candidates\": [\n    {\n      \"class_name\": \"<RejectedClassName>\",\n      \"reason\": \"<why this candidate should not be inserted>\"\n    }\n  ],\n  \"human_review_note\": \"<short note explaining what a human reviewer should verify>\"\n}\n",
+      "pre_fallback_free_discovery": {
+        "decision": "add",
+        "update_needed": true,
+        "candidate_new_classes": [
+          {
+            "class_name": "Overcharge",
+            "parent_class": "Overcurrent",
+            "label": "Overcharge",
+            "comment": "Overcharge is an anomaly characterized by rapid voltage drop and elevated temperature. This anomaly can lead to short-circuit or thermal runaway, posing significant risks to the battery and its applications.",
+            "evidence": [
+              "A6",
+              "Current Sensor",
+              "Voltage Sensor",
+              "Battery",
+              "Current Observed Pattern: voltage_drop",
+              "Affected Channel(s): voltage",
+              "Observed Patterns: voltage_drop, short_circuit, thermal_runaway"
+            ],
+            "confidence": 1.0,
+            "justification": "The anomaly evidence clearly describes Overcharge as an anomaly characterized by voltage drop, elevated temperature, and short-circuit potential. Existing classes do not cover this specific anomaly, and there is sufficient evidence to support the addition of Overcharge."
+          }
+        ],
+        "candidate_new_relationships": [],
+        "duplicate_risk": [
+          {
+            "candidate": "Overdischarge",
+            "similar_existing_class": "Overcharge",
+            "risk": "high",
+            "reason": "Overdischarge is a subclass of Overcharge, and there is a high risk of duplicates given the similar observed patterns and anomaly scores."
+          }
+        ],
+        "rejected_candidates": [],
+        "human_review_note": "<Anomaly evidence and ontology vocabulary are sufficient to add Overcharge as a new fine-grained class. A human reviewer should verify the evidence and class definition to ensure proper ontology consistency.>"
+      },
+      "pre_fallback_parse_error": null
+    },
+    "pre_filtered_duplicates": {
+      "types": [
+        "Overcharge"
+      ],
+      "relationships": []
+    },
+    "fallback_used": true,
+    "fallback_reason": "duplicate_only_proposal",
+    "human_review_result": {
+      "accepted_types": [
+        {
+          "name": "MissingSensorSegment",
+          "label": "Missing Sensor Segment",
+          "description": "A fine-grained anomaly subtype characterized by a contiguous gap in telemetry from a sensor channel, typically indicating a sensor dropout or BMS communication loss.",
+          "parent_class": "FailureMode"
+        }
+      ],
+      "accepted_relationships": [
+        {
+          "from": "http://example.org/battery-ontology#MissingSensorSegment",
+          "to": "http://example.org/battery-ontology#Overdischarge",
+          "description": "Missing Sensor Segment can lead to Overdischarge."
+        }
+      ],
+      "accepted_triples": [
+        {
+          "subject": "http://example.org/battery-ontology#MissingSensorSegment",
+          "predicate": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+          "object": "http://www.w3.org/2002/07/owl#Class"
+        },
+        {
+          "subject": "http://example.org/battery-ontology#MissingSensorSegment",
+          "predicate": "http://www.w3.org/2000/01/rdf-schema#subClassOf",
+          "object": "http://example.org/battery-ontology#FailureMode"
+        },
+        {
+          "subject": "http://example.org/battery-ontology#MissingSensorSegment",
+          "predicate": "http://www.w3.org/2000/01/rdf-schema#label",
+          "object": "Missing Sensor Segment"
+        },
+        {
+          "subject": "http://example.org/battery-ontology#MissingSensorSegment",
+          "predicate": "http://www.w3.org/2000/01/rdf-schema#comment",
+          "object": "A fine-grained anomaly subtype characterized by a contiguous gap in telemetry from a sensor channel, typically indicating a sensor dropout or BMS communication loss."
+        },
+        {
+          "subject": "http://example.org/battery-ontology#MissingSensorSegment",
+          "predicate": "http://example.org/battery-ontology#leadsTo",
+          "object": "http://example.org/battery-ontology#Overdischarge"
+        }
+      ],
+      "rejected_items": [],
+      "reviewer_notes": ""
+    },
+    "stage6_validation_decision": "accepted",
+    "stage7_triples_added": 10
+  }
+]

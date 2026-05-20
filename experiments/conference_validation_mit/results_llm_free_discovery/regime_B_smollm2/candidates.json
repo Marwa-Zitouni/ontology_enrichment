@@ -1,0 +1,1812 @@
+[
+  {
+    "sample_idx": 7,
+    "anomaly_id": "",
+    "anomaly_type": "normal",
+    "injection_subtype": "",
+    "is_anomaly_gt": false,
+    "cell_id": "MIT_b1_cell000",
+    "cycle": 924,
+    "raw_score": 0.012126266956329346,
+    "normalized_score": 0.5045685172080994,
+    "threshold": 0.012016472406685352,
+    "threshold_crossed": true,
+    "confidence_gate": {
+      "passed": true,
+      "reason": "Score 0.5046 >= 0.2"
+    },
+    "temporal_consistency": {
+      "passed": true,
+      "reason": "Anomaly in 1/1 windows (need 1/3)",
+      "count": 1
+    },
+    "semantic_cross_validation": {
+      "passed": true,
+      "reason": "Semantically validated \u2014 rules: ['Voltage Drop Below Threshold ==> Overdischarge'], failures: ['Overdischarge']",
+      "matched_rules": [
+        {
+          "rule": "Voltage Drop Below Threshold ==> Overdischarge",
+          "matched_conditions": [
+            "voltage_drop"
+          ],
+          "implied_failure": "Overdischarge",
+          "failure_uri": "http://example.org/battery-ontology#Overdischarge"
+        }
+      ]
+    },
+    "patterns_observed": [
+      "voltage_drop"
+    ],
+    "stage3_decision": "validated",
+    "stage4_reasoning": "confirmed",
+    "failure_modes": [
+      "Overdischarge"
+    ],
+    "stage5_decision": "skipped_existing"
+  },
+  {
+    "sample_idx": 9,
+    "anomaly_id": "",
+    "anomaly_type": "normal",
+    "injection_subtype": "",
+    "is_anomaly_gt": false,
+    "cell_id": "MIT_b1_cell000",
+    "cycle": 1187,
+    "raw_score": 0.012165378779172897,
+    "normalized_score": 0.5061959028244019,
+    "threshold": 0.012016472406685352,
+    "threshold_crossed": true,
+    "confidence_gate": {
+      "passed": true,
+      "reason": "Score 0.5062 >= 0.2"
+    },
+    "temporal_consistency": {
+      "passed": true,
+      "reason": "Anomaly in 2/2 windows (need 1/3)",
+      "count": 2
+    },
+    "semantic_cross_validation": {
+      "passed": true,
+      "reason": "Semantically validated \u2014 rules: ['Voltage Drop Below Threshold ==> Overdischarge'], failures: ['Overdischarge']",
+      "matched_rules": [
+        {
+          "rule": "Voltage Drop Below Threshold ==> Overdischarge",
+          "matched_conditions": [
+            "voltage_drop"
+          ],
+          "implied_failure": "Overdischarge",
+          "failure_uri": "http://example.org/battery-ontology#Overdischarge"
+        }
+      ]
+    },
+    "patterns_observed": [
+      "voltage_drop"
+    ],
+    "stage3_decision": "validated",
+    "stage4_reasoning": "confirmed",
+    "failure_modes": [
+      "Overdischarge"
+    ],
+    "stage5_decision": "skipped_existing"
+  },
+  {
+    "sample_idx": 15,
+    "anomaly_id": "",
+    "anomaly_type": "normal",
+    "injection_subtype": "",
+    "is_anomaly_gt": false,
+    "cell_id": "MIT_b1_cell001",
+    "cycle": 655,
+    "raw_score": 0.012056450359523296,
+    "normalized_score": 0.5016634464263916,
+    "threshold": 0.012016472406685352,
+    "threshold_crossed": true,
+    "confidence_gate": {
+      "passed": true,
+      "reason": "Score 0.5017 >= 0.2"
+    },
+    "temporal_consistency": {
+      "passed": true,
+      "reason": "Anomaly in 3/3 windows (need 1/3)",
+      "count": 3
+    },
+    "semantic_cross_validation": {
+      "passed": true,
+      "reason": "Semantically validated \u2014 rules: ['Voltage Drop Below Threshold ==> Overdischarge'], failures: ['Overdischarge']",
+      "matched_rules": [
+        {
+          "rule": "Voltage Drop Below Threshold ==> Overdischarge",
+          "matched_conditions": [
+            "voltage_drop"
+          ],
+          "implied_failure": "Overdischarge",
+          "failure_uri": "http://example.org/battery-ontology#Overdischarge"
+        }
+      ]
+    },
+    "patterns_observed": [
+      "voltage_drop"
+    ],
+    "stage3_decision": "validated",
+    "stage4_reasoning": "confirmed",
+    "failure_modes": [
+      "Overdischarge"
+    ],
+    "stage5_decision": "skipped_existing"
+  },
+  {
+    "sample_idx": 17,
+    "anomaly_id": "",
+    "anomaly_type": "normal",
+    "injection_subtype": "",
+    "is_anomaly_gt": false,
+    "cell_id": "MIT_b1_cell001",
+    "cycle": 915,
+    "raw_score": 0.012609270401299,
+    "normalized_score": 0.5246660709381104,
+    "threshold": 0.012016472406685352,
+    "threshold_crossed": true,
+    "confidence_gate": {
+      "passed": true,
+      "reason": "Score 0.5247 >= 0.2"
+    },
+    "temporal_consistency": {
+      "passed": true,
+      "reason": "Anomaly in 3/3 windows (need 1/3)",
+      "count": 3
+    },
+    "semantic_cross_validation": {
+      "passed": true,
+      "reason": "Semantically validated \u2014 rules: ['Voltage Drop Below Threshold ==> Overdischarge'], failures: ['Overdischarge']",
+      "matched_rules": [
+        {
+          "rule": "Voltage Drop Below Threshold ==> Overdischarge",
+          "matched_conditions": [
+            "voltage_drop"
+          ],
+          "implied_failure": "Overdischarge",
+          "failure_uri": "http://example.org/battery-ontology#Overdischarge"
+        }
+      ]
+    },
+    "patterns_observed": [
+      "voltage_drop"
+    ],
+    "stage3_decision": "validated",
+    "stage4_reasoning": "confirmed",
+    "failure_modes": [
+      "Overdischarge"
+    ],
+    "stage5_decision": "skipped_existing"
+  },
+  {
+    "sample_idx": 18,
+    "anomaly_id": "",
+    "anomaly_type": "normal",
+    "injection_subtype": "",
+    "is_anomaly_gt": false,
+    "cell_id": "MIT_b1_cell001",
+    "cycle": 1046,
+    "raw_score": 0.01202076394110918,
+    "normalized_score": 0.5001785755157471,
+    "threshold": 0.012016472406685352,
+    "threshold_crossed": true,
+    "confidence_gate": {
+      "passed": true,
+      "reason": "Score 0.5002 >= 0.2"
+    },
+    "temporal_consistency": {
+      "passed": true,
+      "reason": "Anomaly in 3/3 windows (need 1/3)",
+      "count": 3
+    },
+    "semantic_cross_validation": {
+      "passed": true,
+      "reason": "Semantically validated \u2014 rules: ['Voltage Drop Below Threshold ==> Overdischarge'], failures: ['Overdischarge']",
+      "matched_rules": [
+        {
+          "rule": "Voltage Drop Below Threshold ==> Overdischarge",
+          "matched_conditions": [
+            "voltage_drop"
+          ],
+          "implied_failure": "Overdischarge",
+          "failure_uri": "http://example.org/battery-ontology#Overdischarge"
+        }
+      ]
+    },
+    "patterns_observed": [
+      "voltage_drop"
+    ],
+    "stage3_decision": "validated",
+    "stage4_reasoning": "confirmed",
+    "failure_modes": [
+      "Overdischarge"
+    ],
+    "stage5_decision": "skipped_existing"
+  },
+  {
+    "sample_idx": 28,
+    "anomaly_id": "A2",
+    "anomaly_type": "thermal_runaway",
+    "injection_subtype": "abnormal_temperature_rise",
+    "is_anomaly_gt": true,
+    "cell_id": "MIT_b1_cell002",
+    "cycle": 1044,
+    "raw_score": 0.012492592446506023,
+    "normalized_score": 0.5198111534118652,
+    "threshold": 0.012016472406685352,
+    "threshold_crossed": true,
+    "confidence_gate": {
+      "passed": true,
+      "reason": "Score 0.5198 >= 0.2"
+    },
+    "temporal_consistency": {
+      "passed": true,
+      "reason": "Anomaly in 3/3 windows (need 1/3)",
+      "count": 3
+    },
+    "semantic_cross_validation": {
+      "passed": true,
+      "reason": "Semantically validated \u2014 rules: ['Voltage Drop Below Threshold ==> Overdischarge'], failures: ['Overdischarge']",
+      "matched_rules": [
+        {
+          "rule": "Voltage Drop Below Threshold ==> Overdischarge",
+          "matched_conditions": [
+            "voltage_drop"
+          ],
+          "implied_failure": "Overdischarge",
+          "failure_uri": "http://example.org/battery-ontology#Overdischarge"
+        }
+      ]
+    },
+    "patterns_observed": [
+      "temperature_rise",
+      "voltage_drop"
+    ],
+    "stage3_decision": "validated",
+    "stage4_reasoning": "confirmed",
+    "failure_modes": [
+      "Overdischarge"
+    ],
+    "stage5_trigger_subtype": "AbnormalTemperatureRise",
+    "stage5_decision": "executed",
+    "stage6_decision": "accepted",
+    "stage7_decision": "applied:10"
+  },
+  {
+    "sample_idx": 36,
+    "anomaly_id": "",
+    "anomaly_type": "normal",
+    "injection_subtype": "",
+    "is_anomaly_gt": false,
+    "cell_id": "MIT_b1_cell003",
+    "cycle": 816,
+    "raw_score": 0.01206348929554224,
+    "normalized_score": 0.5019563436508179,
+    "threshold": 0.012016472406685352,
+    "threshold_crossed": true,
+    "confidence_gate": {
+      "passed": true,
+      "reason": "Score 0.5020 >= 0.2"
+    },
+    "temporal_consistency": {
+      "passed": true,
+      "reason": "Anomaly in 3/3 windows (need 1/3)",
+      "count": 3
+    },
+    "semantic_cross_validation": {
+      "passed": true,
+      "reason": "Semantically validated \u2014 rules: ['Voltage Drop Below Threshold ==> Overdischarge'], failures: ['Overdischarge']",
+      "matched_rules": [
+        {
+          "rule": "Voltage Drop Below Threshold ==> Overdischarge",
+          "matched_conditions": [
+            "voltage_drop"
+          ],
+          "implied_failure": "Overdischarge",
+          "failure_uri": "http://example.org/battery-ontology#Overdischarge"
+        }
+      ]
+    },
+    "patterns_observed": [
+      "voltage_drop"
+    ],
+    "stage3_decision": "validated",
+    "stage4_reasoning": "confirmed",
+    "failure_modes": [
+      "Overdischarge"
+    ],
+    "stage5_decision": "skipped_existing"
+  },
+  {
+    "sample_idx": 37,
+    "anomaly_id": "A4",
+    "anomaly_type": "overcharge",
+    "injection_subtype": "sensor_noise_burst",
+    "is_anomaly_gt": true,
+    "cell_id": "MIT_b1_cell003",
+    "cycle": 952,
+    "raw_score": 0.012586231343448162,
+    "normalized_score": 0.523707389831543,
+    "threshold": 0.012016472406685352,
+    "threshold_crossed": true,
+    "confidence_gate": {
+      "passed": true,
+      "reason": "Score 0.5237 >= 0.2"
+    },
+    "temporal_consistency": {
+      "passed": true,
+      "reason": "Anomaly in 3/3 windows (need 1/3)",
+      "count": 3
+    },
+    "semantic_cross_validation": {
+      "passed": true,
+      "reason": "Semantically validated \u2014 rules: ['Voltage Drop Below Threshold ==> Overdischarge'], failures: ['Overdischarge']",
+      "matched_rules": [
+        {
+          "rule": "Voltage Drop Below Threshold ==> Overdischarge",
+          "matched_conditions": [
+            "voltage_drop"
+          ],
+          "implied_failure": "Overdischarge",
+          "failure_uri": "http://example.org/battery-ontology#Overdischarge"
+        }
+      ]
+    },
+    "patterns_observed": [
+      "voltage_drop"
+    ],
+    "stage3_decision": "validated",
+    "stage4_reasoning": "confirmed",
+    "failure_modes": [
+      "Overdischarge"
+    ],
+    "stage5_trigger_subtype": "SensorNoiseBurst",
+    "stage5_decision": "executed",
+    "stage6_decision": "accepted",
+    "stage7_decision": "applied:10"
+  },
+  {
+    "sample_idx": 38,
+    "anomaly_id": "",
+    "anomaly_type": "normal",
+    "injection_subtype": "",
+    "is_anomaly_gt": false,
+    "cell_id": "MIT_b1_cell003",
+    "cycle": 1087,
+    "raw_score": 0.012849804945290089,
+    "normalized_score": 0.5346745848655701,
+    "threshold": 0.012016472406685352,
+    "threshold_crossed": true,
+    "confidence_gate": {
+      "passed": true,
+      "reason": "Score 0.5347 >= 0.2"
+    },
+    "temporal_consistency": {
+      "passed": true,
+      "reason": "Anomaly in 3/3 windows (need 1/3)",
+      "count": 3
+    },
+    "semantic_cross_validation": {
+      "passed": true,
+      "reason": "Semantically validated \u2014 rules: ['Voltage Drop Below Threshold ==> Overdischarge'], failures: ['Overdischarge']",
+      "matched_rules": [
+        {
+          "rule": "Voltage Drop Below Threshold ==> Overdischarge",
+          "matched_conditions": [
+            "voltage_drop"
+          ],
+          "implied_failure": "Overdischarge",
+          "failure_uri": "http://example.org/battery-ontology#Overdischarge"
+        }
+      ]
+    },
+    "patterns_observed": [
+      "voltage_drop"
+    ],
+    "stage3_decision": "validated",
+    "stage4_reasoning": "confirmed",
+    "failure_modes": [
+      "Overdischarge"
+    ],
+    "stage5_decision": "skipped_existing"
+  },
+  {
+    "sample_idx": 39,
+    "anomaly_id": "",
+    "anomaly_type": "normal",
+    "injection_subtype": "",
+    "is_anomaly_gt": false,
+    "cell_id": "MIT_b1_cell003",
+    "cycle": 1223,
+    "raw_score": 0.01378675177693367,
+    "normalized_score": 0.5736605525016785,
+    "threshold": 0.012016472406685352,
+    "threshold_crossed": true,
+    "confidence_gate": {
+      "passed": true,
+      "reason": "Score 0.5737 >= 0.2"
+    },
+    "temporal_consistency": {
+      "passed": true,
+      "reason": "Anomaly in 3/3 windows (need 1/3)",
+      "count": 3
+    },
+    "semantic_cross_validation": {
+      "passed": true,
+      "reason": "Semantically validated \u2014 rules: ['Voltage Drop Below Threshold ==> Overdischarge'], failures: ['Overdischarge']",
+      "matched_rules": [
+        {
+          "rule": "Voltage Drop Below Threshold ==> Overdischarge",
+          "matched_conditions": [
+            "voltage_drop"
+          ],
+          "implied_failure": "Overdischarge",
+          "failure_uri": "http://example.org/battery-ontology#Overdischarge"
+        }
+      ]
+    },
+    "patterns_observed": [
+      "voltage_drop"
+    ],
+    "stage3_decision": "validated",
+    "stage4_reasoning": "confirmed",
+    "failure_modes": [
+      "Overdischarge"
+    ],
+    "stage5_decision": "skipped_existing"
+  },
+  {
+    "sample_idx": 40,
+    "anomaly_id": "",
+    "anomaly_type": "normal",
+    "injection_subtype": "",
+    "is_anomaly_gt": false,
+    "cell_id": "MIT_b1_cell004",
+    "cycle": 3,
+    "raw_score": 0.012123841792345047,
+    "normalized_score": 0.5044676065444946,
+    "threshold": 0.012016472406685352,
+    "threshold_crossed": true,
+    "confidence_gate": {
+      "passed": true,
+      "reason": "Score 0.5045 >= 0.2"
+    },
+    "temporal_consistency": {
+      "passed": true,
+      "reason": "Anomaly in 3/3 windows (need 1/3)",
+      "count": 3
+    },
+    "semantic_cross_validation": {
+      "passed": true,
+      "reason": "Semantically validated \u2014 rules: ['Voltage Drop Below Threshold ==> Overdischarge'], failures: ['Overdischarge']",
+      "matched_rules": [
+        {
+          "rule": "Voltage Drop Below Threshold ==> Overdischarge",
+          "matched_conditions": [
+            "voltage_drop"
+          ],
+          "implied_failure": "Overdischarge",
+          "failure_uri": "http://example.org/battery-ontology#Overdischarge"
+        }
+      ]
+    },
+    "patterns_observed": [
+      "voltage_drop"
+    ],
+    "stage3_decision": "validated",
+    "stage4_reasoning": "confirmed",
+    "failure_modes": [
+      "Overdischarge"
+    ],
+    "stage5_decision": "skipped_existing"
+  },
+  {
+    "sample_idx": 44,
+    "anomaly_id": "",
+    "anomaly_type": "normal",
+    "injection_subtype": "",
+    "is_anomaly_gt": false,
+    "cell_id": "MIT_b1_cell004",
+    "cycle": 546,
+    "raw_score": 0.012165426276624203,
+    "normalized_score": 0.5061979293823242,
+    "threshold": 0.012016472406685352,
+    "threshold_crossed": true,
+    "confidence_gate": {
+      "passed": true,
+      "reason": "Score 0.5062 >= 0.2"
+    },
+    "temporal_consistency": {
+      "passed": true,
+      "reason": "Anomaly in 3/3 windows (need 1/3)",
+      "count": 3
+    },
+    "semantic_cross_validation": {
+      "passed": true,
+      "reason": "Semantically validated \u2014 rules: ['Voltage Drop Below Threshold ==> Overdischarge'], failures: ['Overdischarge']",
+      "matched_rules": [
+        {
+          "rule": "Voltage Drop Below Threshold ==> Overdischarge",
+          "matched_conditions": [
+            "voltage_drop"
+          ],
+          "implied_failure": "Overdischarge",
+          "failure_uri": "http://example.org/battery-ontology#Overdischarge"
+        }
+      ]
+    },
+    "patterns_observed": [
+      "voltage_drop"
+    ],
+    "stage3_decision": "validated",
+    "stage4_reasoning": "confirmed",
+    "failure_modes": [
+      "Overdischarge"
+    ],
+    "stage5_decision": "skipped_existing"
+  },
+  {
+    "sample_idx": 47,
+    "anomaly_id": "",
+    "anomaly_type": "normal",
+    "injection_subtype": "",
+    "is_anomaly_gt": false,
+    "cell_id": "MIT_b1_cell004",
+    "cycle": 953,
+    "raw_score": 0.012118673883378506,
+    "normalized_score": 0.504252552986145,
+    "threshold": 0.012016472406685352,
+    "threshold_crossed": true,
+    "confidence_gate": {
+      "passed": true,
+      "reason": "Score 0.5043 >= 0.2"
+    },
+    "temporal_consistency": {
+      "passed": true,
+      "reason": "Anomaly in 3/3 windows (need 1/3)",
+      "count": 3
+    },
+    "semantic_cross_validation": {
+      "passed": true,
+      "reason": "Semantically validated \u2014 rules: ['Voltage Drop Below Threshold ==> Overdischarge'], failures: ['Overdischarge']",
+      "matched_rules": [
+        {
+          "rule": "Voltage Drop Below Threshold ==> Overdischarge",
+          "matched_conditions": [
+            "voltage_drop"
+          ],
+          "implied_failure": "Overdischarge",
+          "failure_uri": "http://example.org/battery-ontology#Overdischarge"
+        }
+      ]
+    },
+    "patterns_observed": [
+      "voltage_drop"
+    ],
+    "stage3_decision": "validated",
+    "stage4_reasoning": "confirmed",
+    "failure_modes": [
+      "Overdischarge"
+    ],
+    "stage5_decision": "skipped_existing"
+  },
+  {
+    "sample_idx": 48,
+    "anomaly_id": "",
+    "anomaly_type": "normal",
+    "injection_subtype": "",
+    "is_anomaly_gt": false,
+    "cell_id": "MIT_b1_cell004",
+    "cycle": 1088,
+    "raw_score": 0.012016472406685352,
+    "normalized_score": 0.5,
+    "threshold": 0.012016472406685352,
+    "threshold_crossed": true,
+    "confidence_gate": {
+      "passed": true,
+      "reason": "Score 0.5000 >= 0.2"
+    },
+    "temporal_consistency": {
+      "passed": true,
+      "reason": "Anomaly in 3/3 windows (need 1/3)",
+      "count": 3
+    },
+    "semantic_cross_validation": {
+      "passed": true,
+      "reason": "Semantically validated \u2014 rules: ['Voltage Drop Below Threshold ==> Overdischarge'], failures: ['Overdischarge']",
+      "matched_rules": [
+        {
+          "rule": "Voltage Drop Below Threshold ==> Overdischarge",
+          "matched_conditions": [
+            "voltage_drop"
+          ],
+          "implied_failure": "Overdischarge",
+          "failure_uri": "http://example.org/battery-ontology#Overdischarge"
+        }
+      ]
+    },
+    "patterns_observed": [
+      "voltage_drop"
+    ],
+    "stage3_decision": "validated",
+    "stage4_reasoning": "confirmed",
+    "failure_modes": [
+      "Overdischarge"
+    ],
+    "stage5_decision": "skipped_existing"
+  },
+  {
+    "sample_idx": 49,
+    "anomaly_id": "A6",
+    "anomaly_type": "thermal_runaway",
+    "injection_subtype": "missing_sensor_segment",
+    "is_anomaly_gt": true,
+    "cell_id": "MIT_b1_cell004",
+    "cycle": 1224,
+    "raw_score": 0.012495317496359348,
+    "normalized_score": 0.519924521446228,
+    "threshold": 0.012016472406685352,
+    "threshold_crossed": true,
+    "confidence_gate": {
+      "passed": true,
+      "reason": "Score 0.5199 >= 0.2"
+    },
+    "temporal_consistency": {
+      "passed": true,
+      "reason": "Anomaly in 3/3 windows (need 1/3)",
+      "count": 3
+    },
+    "semantic_cross_validation": {
+      "passed": true,
+      "reason": "Semantically validated \u2014 rules: ['Voltage Drop Below Threshold ==> Overdischarge'], failures: ['Overdischarge']",
+      "matched_rules": [
+        {
+          "rule": "Voltage Drop Below Threshold ==> Overdischarge",
+          "matched_conditions": [
+            "voltage_drop"
+          ],
+          "implied_failure": "Overdischarge",
+          "failure_uri": "http://example.org/battery-ontology#Overdischarge"
+        }
+      ]
+    },
+    "patterns_observed": [
+      "voltage_drop"
+    ],
+    "stage3_decision": "validated",
+    "stage4_reasoning": "confirmed",
+    "failure_modes": [
+      "Overdischarge"
+    ],
+    "stage5_trigger_subtype": "MissingSensorSegment",
+    "stage5_decision": "executed",
+    "stage6_decision": "accepted",
+    "stage7_decision": "applied:10"
+  },
+  {
+    "sample_idx": 51,
+    "anomaly_id": "",
+    "anomaly_type": "normal",
+    "injection_subtype": "",
+    "is_anomaly_gt": false,
+    "cell_id": "MIT_b1_cell005",
+    "cycle": 122,
+    "raw_score": 0.012283704243600368,
+    "normalized_score": 0.5111194252967834,
+    "threshold": 0.012016472406685352,
+    "threshold_crossed": true,
+    "confidence_gate": {
+      "passed": true,
+      "reason": "Score 0.5111 >= 0.2"
+    },
+    "temporal_consistency": {
+      "passed": true,
+      "reason": "Anomaly in 3/3 windows (need 1/3)",
+      "count": 3
+    },
+    "semantic_cross_validation": {
+      "passed": true,
+      "reason": "Semantically validated \u2014 rules: ['Voltage Drop Below Threshold ==> Overdischarge'], failures: ['Overdischarge']",
+      "matched_rules": [
+        {
+          "rule": "Voltage Drop Below Threshold ==> Overdischarge",
+          "matched_conditions": [
+            "voltage_drop"
+          ],
+          "implied_failure": "Overdischarge",
+          "failure_uri": "http://example.org/battery-ontology#Overdischarge"
+        }
+      ]
+    },
+    "patterns_observed": [
+      "voltage_drop"
+    ],
+    "stage3_decision": "validated",
+    "stage4_reasoning": "confirmed",
+    "failure_modes": [
+      "Overdischarge"
+    ],
+    "stage5_decision": "skipped_existing"
+  },
+  {
+    "sample_idx": 53,
+    "anomaly_id": "",
+    "anomaly_type": "normal",
+    "injection_subtype": "",
+    "is_anomaly_gt": false,
+    "cell_id": "MIT_b1_cell005",
+    "cycle": 359,
+    "raw_score": 0.012423135340213776,
+    "normalized_score": 0.5169210433959961,
+    "threshold": 0.012016472406685352,
+    "threshold_crossed": true,
+    "confidence_gate": {
+      "passed": true,
+      "reason": "Score 0.5169 >= 0.2"
+    },
+    "temporal_consistency": {
+      "passed": true,
+      "reason": "Anomaly in 3/3 windows (need 1/3)",
+      "count": 3
+    },
+    "semantic_cross_validation": {
+      "passed": true,
+      "reason": "Semantically validated \u2014 rules: ['Voltage Drop Below Threshold ==> Overdischarge'], failures: ['Overdischarge']",
+      "matched_rules": [
+        {
+          "rule": "Voltage Drop Below Threshold ==> Overdischarge",
+          "matched_conditions": [
+            "voltage_drop"
+          ],
+          "implied_failure": "Overdischarge",
+          "failure_uri": "http://example.org/battery-ontology#Overdischarge"
+        }
+      ]
+    },
+    "patterns_observed": [
+      "voltage_drop"
+    ],
+    "stage3_decision": "validated",
+    "stage4_reasoning": "confirmed",
+    "failure_modes": [
+      "Overdischarge"
+    ],
+    "stage5_decision": "skipped_existing"
+  },
+  {
+    "sample_idx": 54,
+    "anomaly_id": "",
+    "anomaly_type": "normal",
+    "injection_subtype": "",
+    "is_anomaly_gt": false,
+    "cell_id": "MIT_b1_cell005",
+    "cycle": 478,
+    "raw_score": 0.012257223017513752,
+    "normalized_score": 0.5100175142288208,
+    "threshold": 0.012016472406685352,
+    "threshold_crossed": true,
+    "confidence_gate": {
+      "passed": true,
+      "reason": "Score 0.5100 >= 0.2"
+    },
+    "temporal_consistency": {
+      "passed": true,
+      "reason": "Anomaly in 3/3 windows (need 1/3)",
+      "count": 3
+    },
+    "semantic_cross_validation": {
+      "passed": true,
+      "reason": "Semantically validated \u2014 rules: ['Voltage Drop Below Threshold ==> Overdischarge'], failures: ['Overdischarge']",
+      "matched_rules": [
+        {
+          "rule": "Voltage Drop Below Threshold ==> Overdischarge",
+          "matched_conditions": [
+            "voltage_drop"
+          ],
+          "implied_failure": "Overdischarge",
+          "failure_uri": "http://example.org/battery-ontology#Overdischarge"
+        }
+      ]
+    },
+    "patterns_observed": [
+      "voltage_drop"
+    ],
+    "stage3_decision": "validated",
+    "stage4_reasoning": "confirmed",
+    "failure_modes": [
+      "Overdischarge"
+    ],
+    "stage5_decision": "skipped_existing"
+  },
+  {
+    "sample_idx": 55,
+    "anomaly_id": "",
+    "anomaly_type": "normal",
+    "injection_subtype": "",
+    "is_anomaly_gt": false,
+    "cell_id": "MIT_b1_cell005",
+    "cycle": 596,
+    "raw_score": 0.012330849654972553,
+    "normalized_score": 0.5130810737609863,
+    "threshold": 0.012016472406685352,
+    "threshold_crossed": true,
+    "confidence_gate": {
+      "passed": true,
+      "reason": "Score 0.5131 >= 0.2"
+    },
+    "temporal_consistency": {
+      "passed": true,
+      "reason": "Anomaly in 3/3 windows (need 1/3)",
+      "count": 3
+    },
+    "semantic_cross_validation": {
+      "passed": true,
+      "reason": "Semantically validated \u2014 rules: ['Voltage Drop Below Threshold ==> Overdischarge'], failures: ['Overdischarge']",
+      "matched_rules": [
+        {
+          "rule": "Voltage Drop Below Threshold ==> Overdischarge",
+          "matched_conditions": [
+            "voltage_drop"
+          ],
+          "implied_failure": "Overdischarge",
+          "failure_uri": "http://example.org/battery-ontology#Overdischarge"
+        }
+      ]
+    },
+    "patterns_observed": [
+      "voltage_drop"
+    ],
+    "stage3_decision": "validated",
+    "stage4_reasoning": "confirmed",
+    "failure_modes": [
+      "Overdischarge"
+    ],
+    "stage5_decision": "skipped_existing"
+  },
+  {
+    "sample_idx": 56,
+    "anomaly_id": "",
+    "anomaly_type": "normal",
+    "injection_subtype": "",
+    "is_anomaly_gt": false,
+    "cell_id": "MIT_b1_cell005",
+    "cycle": 715,
+    "raw_score": 0.012561420910060406,
+    "normalized_score": 0.5226750373840332,
+    "threshold": 0.012016472406685352,
+    "threshold_crossed": true,
+    "confidence_gate": {
+      "passed": true,
+      "reason": "Score 0.5227 >= 0.2"
+    },
+    "temporal_consistency": {
+      "passed": true,
+      "reason": "Anomaly in 3/3 windows (need 1/3)",
+      "count": 3
+    },
+    "semantic_cross_validation": {
+      "passed": true,
+      "reason": "Semantically validated \u2014 rules: ['Voltage Drop Below Threshold ==> Overdischarge'], failures: ['Overdischarge']",
+      "matched_rules": [
+        {
+          "rule": "Voltage Drop Below Threshold ==> Overdischarge",
+          "matched_conditions": [
+            "voltage_drop"
+          ],
+          "implied_failure": "Overdischarge",
+          "failure_uri": "http://example.org/battery-ontology#Overdischarge"
+        }
+      ]
+    },
+    "patterns_observed": [
+      "voltage_drop"
+    ],
+    "stage3_decision": "validated",
+    "stage4_reasoning": "confirmed",
+    "failure_modes": [
+      "Overdischarge"
+    ],
+    "stage5_decision": "skipped_existing"
+  },
+  {
+    "sample_idx": 57,
+    "anomaly_id": "",
+    "anomaly_type": "normal",
+    "injection_subtype": "",
+    "is_anomaly_gt": false,
+    "cell_id": "MIT_b1_cell005",
+    "cycle": 834,
+    "raw_score": 0.012659269385039806,
+    "normalized_score": 0.5267465114593506,
+    "threshold": 0.012016472406685352,
+    "threshold_crossed": true,
+    "confidence_gate": {
+      "passed": true,
+      "reason": "Score 0.5267 >= 0.2"
+    },
+    "temporal_consistency": {
+      "passed": true,
+      "reason": "Anomaly in 3/3 windows (need 1/3)",
+      "count": 3
+    },
+    "semantic_cross_validation": {
+      "passed": true,
+      "reason": "Semantically validated \u2014 rules: ['Voltage Drop Below Threshold ==> Overdischarge'], failures: ['Overdischarge']",
+      "matched_rules": [
+        {
+          "rule": "Voltage Drop Below Threshold ==> Overdischarge",
+          "matched_conditions": [
+            "voltage_drop"
+          ],
+          "implied_failure": "Overdischarge",
+          "failure_uri": "http://example.org/battery-ontology#Overdischarge"
+        }
+      ]
+    },
+    "patterns_observed": [
+      "voltage_drop"
+    ],
+    "stage3_decision": "validated",
+    "stage4_reasoning": "confirmed",
+    "failure_modes": [
+      "Overdischarge"
+    ],
+    "stage5_decision": "skipped_existing"
+  },
+  {
+    "sample_idx": 58,
+    "anomaly_id": "",
+    "anomaly_type": "normal",
+    "injection_subtype": "",
+    "is_anomaly_gt": false,
+    "cell_id": "MIT_b1_cell005",
+    "cycle": 952,
+    "raw_score": 0.013887369073927402,
+    "normalized_score": 0.5778471827507019,
+    "threshold": 0.012016472406685352,
+    "threshold_crossed": true,
+    "confidence_gate": {
+      "passed": true,
+      "reason": "Score 0.5778 >= 0.2"
+    },
+    "temporal_consistency": {
+      "passed": true,
+      "reason": "Anomaly in 3/3 windows (need 1/3)",
+      "count": 3
+    },
+    "semantic_cross_validation": {
+      "passed": true,
+      "reason": "Semantically validated \u2014 rules: ['Voltage Drop Below Threshold ==> Overdischarge'], failures: ['Overdischarge']",
+      "matched_rules": [
+        {
+          "rule": "Voltage Drop Below Threshold ==> Overdischarge",
+          "matched_conditions": [
+            "voltage_drop"
+          ],
+          "implied_failure": "Overdischarge",
+          "failure_uri": "http://example.org/battery-ontology#Overdischarge"
+        }
+      ]
+    },
+    "patterns_observed": [
+      "voltage_drop"
+    ],
+    "stage3_decision": "validated",
+    "stage4_reasoning": "confirmed",
+    "failure_modes": [
+      "Overdischarge"
+    ],
+    "stage5_decision": "skipped_existing"
+  },
+  {
+    "sample_idx": 59,
+    "anomaly_id": "",
+    "anomaly_type": "normal",
+    "injection_subtype": "",
+    "is_anomaly_gt": false,
+    "cell_id": "MIT_b1_cell005",
+    "cycle": 1071,
+    "raw_score": 0.016388921067118645,
+    "normalized_score": 0.6819356083869934,
+    "threshold": 0.012016472406685352,
+    "threshold_crossed": true,
+    "confidence_gate": {
+      "passed": true,
+      "reason": "Score 0.6819 >= 0.2"
+    },
+    "temporal_consistency": {
+      "passed": true,
+      "reason": "Anomaly in 3/3 windows (need 1/3)",
+      "count": 3
+    },
+    "semantic_cross_validation": {
+      "passed": true,
+      "reason": "Semantically validated \u2014 rules: ['Voltage Drop Below Threshold ==> Overdischarge'], failures: ['Overdischarge']",
+      "matched_rules": [
+        {
+          "rule": "Voltage Drop Below Threshold ==> Overdischarge",
+          "matched_conditions": [
+            "voltage_drop"
+          ],
+          "implied_failure": "Overdischarge",
+          "failure_uri": "http://example.org/battery-ontology#Overdischarge"
+        }
+      ]
+    },
+    "patterns_observed": [
+      "voltage_drop"
+    ],
+    "stage3_decision": "validated",
+    "stage4_reasoning": "confirmed",
+    "failure_modes": [
+      "Overdischarge"
+    ],
+    "stage5_decision": "skipped_existing"
+  },
+  {
+    "sample_idx": 60,
+    "anomaly_id": "",
+    "anomaly_type": "normal",
+    "injection_subtype": "",
+    "is_anomaly_gt": false,
+    "cell_id": "MIT_b1_cell006",
+    "cycle": 3,
+    "raw_score": 0.012023462913930416,
+    "normalized_score": 0.5002908706665039,
+    "threshold": 0.012016472406685352,
+    "threshold_crossed": true,
+    "confidence_gate": {
+      "passed": true,
+      "reason": "Score 0.5003 >= 0.2"
+    },
+    "temporal_consistency": {
+      "passed": true,
+      "reason": "Anomaly in 3/3 windows (need 1/3)",
+      "count": 3
+    },
+    "semantic_cross_validation": {
+      "passed": true,
+      "reason": "Semantically validated \u2014 rules: ['Voltage Drop Below Threshold ==> Overdischarge'], failures: ['Overdischarge']",
+      "matched_rules": [
+        {
+          "rule": "Voltage Drop Below Threshold ==> Overdischarge",
+          "matched_conditions": [
+            "voltage_drop"
+          ],
+          "implied_failure": "Overdischarge",
+          "failure_uri": "http://example.org/battery-ontology#Overdischarge"
+        }
+      ]
+    },
+    "patterns_observed": [
+      "voltage_drop"
+    ],
+    "stage3_decision": "validated",
+    "stage4_reasoning": "confirmed",
+    "failure_modes": [
+      "Overdischarge"
+    ],
+    "stage5_decision": "skipped_existing"
+  },
+  {
+    "sample_idx": 61,
+    "anomaly_id": "",
+    "anomaly_type": "normal",
+    "injection_subtype": "",
+    "is_anomaly_gt": false,
+    "cell_id": "MIT_b1_cell006",
+    "cycle": 73,
+    "raw_score": 0.012137144804000854,
+    "normalized_score": 0.5050210952758789,
+    "threshold": 0.012016472406685352,
+    "threshold_crossed": true,
+    "confidence_gate": {
+      "passed": true,
+      "reason": "Score 0.5050 >= 0.2"
+    },
+    "temporal_consistency": {
+      "passed": true,
+      "reason": "Anomaly in 3/3 windows (need 1/3)",
+      "count": 3
+    },
+    "semantic_cross_validation": {
+      "passed": true,
+      "reason": "Semantically validated \u2014 rules: ['Voltage Drop Below Threshold ==> Overdischarge'], failures: ['Overdischarge']",
+      "matched_rules": [
+        {
+          "rule": "Voltage Drop Below Threshold ==> Overdischarge",
+          "matched_conditions": [
+            "voltage_drop"
+          ],
+          "implied_failure": "Overdischarge",
+          "failure_uri": "http://example.org/battery-ontology#Overdischarge"
+        }
+      ]
+    },
+    "patterns_observed": [
+      "voltage_drop"
+    ],
+    "stage3_decision": "validated",
+    "stage4_reasoning": "confirmed",
+    "failure_modes": [
+      "Overdischarge"
+    ],
+    "stage5_decision": "skipped_existing"
+  },
+  {
+    "sample_idx": 62,
+    "anomaly_id": "",
+    "anomaly_type": "normal",
+    "injection_subtype": "",
+    "is_anomaly_gt": false,
+    "cell_id": "MIT_b1_cell006",
+    "cycle": 143,
+    "raw_score": 0.0125782685354352,
+    "normalized_score": 0.5233761072158813,
+    "threshold": 0.012016472406685352,
+    "threshold_crossed": true,
+    "confidence_gate": {
+      "passed": true,
+      "reason": "Score 0.5234 >= 0.2"
+    },
+    "temporal_consistency": {
+      "passed": true,
+      "reason": "Anomaly in 3/3 windows (need 1/3)",
+      "count": 3
+    },
+    "semantic_cross_validation": {
+      "passed": true,
+      "reason": "Semantically validated \u2014 rules: ['Voltage Drop Below Threshold ==> Overdischarge'], failures: ['Overdischarge']",
+      "matched_rules": [
+        {
+          "rule": "Voltage Drop Below Threshold ==> Overdischarge",
+          "matched_conditions": [
+            "voltage_drop"
+          ],
+          "implied_failure": "Overdischarge",
+          "failure_uri": "http://example.org/battery-ontology#Overdischarge"
+        }
+      ]
+    },
+    "patterns_observed": [
+      "voltage_drop"
+    ],
+    "stage3_decision": "validated",
+    "stage4_reasoning": "confirmed",
+    "failure_modes": [
+      "Overdischarge"
+    ],
+    "stage5_decision": "skipped_existing"
+  },
+  {
+    "sample_idx": 64,
+    "anomaly_id": "",
+    "anomaly_type": "normal",
+    "injection_subtype": "",
+    "is_anomaly_gt": false,
+    "cell_id": "MIT_b1_cell006",
+    "cycle": 283,
+    "raw_score": 0.012870843522250652,
+    "normalized_score": 0.5355499982833862,
+    "threshold": 0.012016472406685352,
+    "threshold_crossed": true,
+    "confidence_gate": {
+      "passed": true,
+      "reason": "Score 0.5355 >= 0.2"
+    },
+    "temporal_consistency": {
+      "passed": true,
+      "reason": "Anomaly in 3/3 windows (need 1/3)",
+      "count": 3
+    },
+    "semantic_cross_validation": {
+      "passed": true,
+      "reason": "Semantically validated \u2014 rules: ['Voltage Drop Below Threshold ==> Overdischarge'], failures: ['Overdischarge']",
+      "matched_rules": [
+        {
+          "rule": "Voltage Drop Below Threshold ==> Overdischarge",
+          "matched_conditions": [
+            "voltage_drop"
+          ],
+          "implied_failure": "Overdischarge",
+          "failure_uri": "http://example.org/battery-ontology#Overdischarge"
+        }
+      ]
+    },
+    "patterns_observed": [
+      "voltage_drop"
+    ],
+    "stage3_decision": "validated",
+    "stage4_reasoning": "confirmed",
+    "failure_modes": [
+      "Overdischarge"
+    ],
+    "stage5_decision": "skipped_existing"
+  },
+  {
+    "sample_idx": 65,
+    "anomaly_id": "",
+    "anomaly_type": "normal",
+    "injection_subtype": "",
+    "is_anomaly_gt": false,
+    "cell_id": "MIT_b1_cell006",
+    "cycle": 353,
+    "raw_score": 0.012826060876250267,
+    "normalized_score": 0.533686637878418,
+    "threshold": 0.012016472406685352,
+    "threshold_crossed": true,
+    "confidence_gate": {
+      "passed": true,
+      "reason": "Score 0.5337 >= 0.2"
+    },
+    "temporal_consistency": {
+      "passed": true,
+      "reason": "Anomaly in 3/3 windows (need 1/3)",
+      "count": 3
+    },
+    "semantic_cross_validation": {
+      "passed": true,
+      "reason": "Semantically validated \u2014 rules: ['Voltage Drop Below Threshold ==> Overdischarge'], failures: ['Overdischarge']",
+      "matched_rules": [
+        {
+          "rule": "Voltage Drop Below Threshold ==> Overdischarge",
+          "matched_conditions": [
+            "voltage_drop"
+          ],
+          "implied_failure": "Overdischarge",
+          "failure_uri": "http://example.org/battery-ontology#Overdischarge"
+        }
+      ]
+    },
+    "patterns_observed": [
+      "voltage_drop"
+    ],
+    "stage3_decision": "validated",
+    "stage4_reasoning": "confirmed",
+    "failure_modes": [
+      "Overdischarge"
+    ],
+    "stage5_decision": "skipped_existing"
+  },
+  {
+    "sample_idx": 66,
+    "anomaly_id": "",
+    "anomaly_type": "normal",
+    "injection_subtype": "",
+    "is_anomaly_gt": false,
+    "cell_id": "MIT_b1_cell006",
+    "cycle": 423,
+    "raw_score": 0.013561392202973366,
+    "normalized_score": 0.5642834305763245,
+    "threshold": 0.012016472406685352,
+    "threshold_crossed": true,
+    "confidence_gate": {
+      "passed": true,
+      "reason": "Score 0.5643 >= 0.2"
+    },
+    "temporal_consistency": {
+      "passed": true,
+      "reason": "Anomaly in 3/3 windows (need 1/3)",
+      "count": 3
+    },
+    "semantic_cross_validation": {
+      "passed": true,
+      "reason": "Semantically validated \u2014 rules: ['Voltage Drop Below Threshold ==> Overdischarge'], failures: ['Overdischarge']",
+      "matched_rules": [
+        {
+          "rule": "Voltage Drop Below Threshold ==> Overdischarge",
+          "matched_conditions": [
+            "voltage_drop"
+          ],
+          "implied_failure": "Overdischarge",
+          "failure_uri": "http://example.org/battery-ontology#Overdischarge"
+        }
+      ]
+    },
+    "patterns_observed": [
+      "voltage_drop"
+    ],
+    "stage3_decision": "validated",
+    "stage4_reasoning": "confirmed",
+    "failure_modes": [
+      "Overdischarge"
+    ],
+    "stage5_decision": "skipped_existing"
+  },
+  {
+    "sample_idx": 67,
+    "anomaly_id": "",
+    "anomaly_type": "normal",
+    "injection_subtype": "",
+    "is_anomaly_gt": false,
+    "cell_id": "MIT_b1_cell006",
+    "cycle": 493,
+    "raw_score": 0.013898903504014015,
+    "normalized_score": 0.5783271193504333,
+    "threshold": 0.012016472406685352,
+    "threshold_crossed": true,
+    "confidence_gate": {
+      "passed": true,
+      "reason": "Score 0.5783 >= 0.2"
+    },
+    "temporal_consistency": {
+      "passed": true,
+      "reason": "Anomaly in 3/3 windows (need 1/3)",
+      "count": 3
+    },
+    "semantic_cross_validation": {
+      "passed": true,
+      "reason": "Semantically validated \u2014 rules: ['Voltage Drop Below Threshold ==> Overdischarge'], failures: ['Overdischarge']",
+      "matched_rules": [
+        {
+          "rule": "Voltage Drop Below Threshold ==> Overdischarge",
+          "matched_conditions": [
+            "voltage_drop"
+          ],
+          "implied_failure": "Overdischarge",
+          "failure_uri": "http://example.org/battery-ontology#Overdischarge"
+        }
+      ]
+    },
+    "patterns_observed": [
+      "voltage_drop"
+    ],
+    "stage3_decision": "validated",
+    "stage4_reasoning": "confirmed",
+    "failure_modes": [
+      "Overdischarge"
+    ],
+    "stage5_decision": "skipped_existing"
+  },
+  {
+    "sample_idx": 68,
+    "anomaly_id": "",
+    "anomaly_type": "normal",
+    "injection_subtype": "",
+    "is_anomaly_gt": false,
+    "cell_id": "MIT_b1_cell006",
+    "cycle": 563,
+    "raw_score": 0.015150848776102066,
+    "normalized_score": 0.6304199695587158,
+    "threshold": 0.012016472406685352,
+    "threshold_crossed": true,
+    "confidence_gate": {
+      "passed": true,
+      "reason": "Score 0.6304 >= 0.2"
+    },
+    "temporal_consistency": {
+      "passed": true,
+      "reason": "Anomaly in 3/3 windows (need 1/3)",
+      "count": 3
+    },
+    "semantic_cross_validation": {
+      "passed": true,
+      "reason": "Semantically validated \u2014 rules: ['Voltage Drop Below Threshold ==> Overdischarge'], failures: ['Overdischarge']",
+      "matched_rules": [
+        {
+          "rule": "Voltage Drop Below Threshold ==> Overdischarge",
+          "matched_conditions": [
+            "voltage_drop"
+          ],
+          "implied_failure": "Overdischarge",
+          "failure_uri": "http://example.org/battery-ontology#Overdischarge"
+        }
+      ]
+    },
+    "patterns_observed": [
+      "voltage_drop"
+    ],
+    "stage3_decision": "validated",
+    "stage4_reasoning": "confirmed",
+    "failure_modes": [
+      "Overdischarge"
+    ],
+    "stage5_decision": "skipped_existing"
+  },
+  {
+    "sample_idx": 69,
+    "anomaly_id": "",
+    "anomaly_type": "normal",
+    "injection_subtype": "",
+    "is_anomaly_gt": false,
+    "cell_id": "MIT_b1_cell006",
+    "cycle": 633,
+    "raw_score": 0.01712990179657936,
+    "normalized_score": 0.712767481803894,
+    "threshold": 0.012016472406685352,
+    "threshold_crossed": true,
+    "confidence_gate": {
+      "passed": true,
+      "reason": "Score 0.7128 >= 0.2"
+    },
+    "temporal_consistency": {
+      "passed": true,
+      "reason": "Anomaly in 3/3 windows (need 1/3)",
+      "count": 3
+    },
+    "semantic_cross_validation": {
+      "passed": true,
+      "reason": "Semantically validated \u2014 rules: ['Voltage Drop Below Threshold ==> Overdischarge'], failures: ['Overdischarge']",
+      "matched_rules": [
+        {
+          "rule": "Voltage Drop Below Threshold ==> Overdischarge",
+          "matched_conditions": [
+            "voltage_drop"
+          ],
+          "implied_failure": "Overdischarge",
+          "failure_uri": "http://example.org/battery-ontology#Overdischarge"
+        }
+      ]
+    },
+    "patterns_observed": [
+      "voltage_drop"
+    ],
+    "stage3_decision": "validated",
+    "stage4_reasoning": "confirmed",
+    "failure_modes": [
+      "Overdischarge"
+    ],
+    "stage5_decision": "skipped_existing"
+  },
+  {
+    "sample_idx": 72,
+    "anomaly_id": "",
+    "anomaly_type": "normal",
+    "injection_subtype": "",
+    "is_anomaly_gt": false,
+    "cell_id": "MIT_b1_cell007",
+    "cycle": 195,
+    "raw_score": 0.012321259826421738,
+    "normalized_score": 0.5126820802688599,
+    "threshold": 0.012016472406685352,
+    "threshold_crossed": true,
+    "confidence_gate": {
+      "passed": true,
+      "reason": "Score 0.5127 >= 0.2"
+    },
+    "temporal_consistency": {
+      "passed": true,
+      "reason": "Anomaly in 3/3 windows (need 1/3)",
+      "count": 3
+    },
+    "semantic_cross_validation": {
+      "passed": true,
+      "reason": "Semantically validated \u2014 rules: ['Voltage Drop Below Threshold ==> Overdischarge'], failures: ['Overdischarge']",
+      "matched_rules": [
+        {
+          "rule": "Voltage Drop Below Threshold ==> Overdischarge",
+          "matched_conditions": [
+            "voltage_drop"
+          ],
+          "implied_failure": "Overdischarge",
+          "failure_uri": "http://example.org/battery-ontology#Overdischarge"
+        }
+      ]
+    },
+    "patterns_observed": [
+      "voltage_drop"
+    ],
+    "stage3_decision": "validated",
+    "stage4_reasoning": "confirmed",
+    "failure_modes": [
+      "Overdischarge"
+    ],
+    "stage5_decision": "skipped_existing"
+  },
+  {
+    "sample_idx": 73,
+    "anomaly_id": "",
+    "anomaly_type": "normal",
+    "injection_subtype": "",
+    "is_anomaly_gt": false,
+    "cell_id": "MIT_b1_cell007",
+    "cycle": 291,
+    "raw_score": 0.012251252308487892,
+    "normalized_score": 0.509769082069397,
+    "threshold": 0.012016472406685352,
+    "threshold_crossed": true,
+    "confidence_gate": {
+      "passed": true,
+      "reason": "Score 0.5098 >= 0.2"
+    },
+    "temporal_consistency": {
+      "passed": true,
+      "reason": "Anomaly in 3/3 windows (need 1/3)",
+      "count": 3
+    },
+    "semantic_cross_validation": {
+      "passed": true,
+      "reason": "Semantically validated \u2014 rules: ['Voltage Drop Below Threshold ==> Overdischarge'], failures: ['Overdischarge']",
+      "matched_rules": [
+        {
+          "rule": "Voltage Drop Below Threshold ==> Overdischarge",
+          "matched_conditions": [
+            "voltage_drop"
+          ],
+          "implied_failure": "Overdischarge",
+          "failure_uri": "http://example.org/battery-ontology#Overdischarge"
+        }
+      ]
+    },
+    "patterns_observed": [
+      "voltage_drop"
+    ],
+    "stage3_decision": "validated",
+    "stage4_reasoning": "confirmed",
+    "failure_modes": [
+      "Overdischarge"
+    ],
+    "stage5_decision": "skipped_existing"
+  },
+  {
+    "sample_idx": 74,
+    "anomaly_id": "",
+    "anomaly_type": "normal",
+    "injection_subtype": "",
+    "is_anomaly_gt": false,
+    "cell_id": "MIT_b1_cell007",
+    "cycle": 387,
+    "raw_score": 0.012540318071842194,
+    "normalized_score": 0.5217970013618469,
+    "threshold": 0.012016472406685352,
+    "threshold_crossed": true,
+    "confidence_gate": {
+      "passed": true,
+      "reason": "Score 0.5218 >= 0.2"
+    },
+    "temporal_consistency": {
+      "passed": true,
+      "reason": "Anomaly in 3/3 windows (need 1/3)",
+      "count": 3
+    },
+    "semantic_cross_validation": {
+      "passed": true,
+      "reason": "Semantically validated \u2014 rules: ['Voltage Drop Below Threshold ==> Overdischarge'], failures: ['Overdischarge']",
+      "matched_rules": [
+        {
+          "rule": "Voltage Drop Below Threshold ==> Overdischarge",
+          "matched_conditions": [
+            "voltage_drop"
+          ],
+          "implied_failure": "Overdischarge",
+          "failure_uri": "http://example.org/battery-ontology#Overdischarge"
+        }
+      ]
+    },
+    "patterns_observed": [
+      "voltage_drop"
+    ],
+    "stage3_decision": "validated",
+    "stage4_reasoning": "confirmed",
+    "failure_modes": [
+      "Overdischarge"
+    ],
+    "stage5_decision": "skipped_existing"
+  },
+  {
+    "sample_idx": 75,
+    "anomaly_id": "",
+    "anomaly_type": "normal",
+    "injection_subtype": "",
+    "is_anomaly_gt": false,
+    "cell_id": "MIT_b1_cell007",
+    "cycle": 483,
+    "raw_score": 0.012569179758429527,
+    "normalized_score": 0.5229979157447815,
+    "threshold": 0.012016472406685352,
+    "threshold_crossed": true,
+    "confidence_gate": {
+      "passed": true,
+      "reason": "Score 0.5230 >= 0.2"
+    },
+    "temporal_consistency": {
+      "passed": true,
+      "reason": "Anomaly in 3/3 windows (need 1/3)",
+      "count": 3
+    },
+    "semantic_cross_validation": {
+      "passed": true,
+      "reason": "Semantically validated \u2014 rules: ['Voltage Drop Below Threshold ==> Overdischarge'], failures: ['Overdischarge']",
+      "matched_rules": [
+        {
+          "rule": "Voltage Drop Below Threshold ==> Overdischarge",
+          "matched_conditions": [
+            "voltage_drop"
+          ],
+          "implied_failure": "Overdischarge",
+          "failure_uri": "http://example.org/battery-ontology#Overdischarge"
+        }
+      ]
+    },
+    "patterns_observed": [
+      "voltage_drop"
+    ],
+    "stage3_decision": "validated",
+    "stage4_reasoning": "confirmed",
+    "failure_modes": [
+      "Overdischarge"
+    ],
+    "stage5_decision": "skipped_existing"
+  },
+  {
+    "sample_idx": 76,
+    "anomaly_id": "",
+    "anomaly_type": "normal",
+    "injection_subtype": "",
+    "is_anomaly_gt": false,
+    "cell_id": "MIT_b1_cell007",
+    "cycle": 579,
+    "raw_score": 0.012999489903450012,
+    "normalized_score": 0.5409029126167297,
+    "threshold": 0.012016472406685352,
+    "threshold_crossed": true,
+    "confidence_gate": {
+      "passed": true,
+      "reason": "Score 0.5409 >= 0.2"
+    },
+    "temporal_consistency": {
+      "passed": true,
+      "reason": "Anomaly in 3/3 windows (need 1/3)",
+      "count": 3
+    },
+    "semantic_cross_validation": {
+      "passed": true,
+      "reason": "Semantically validated \u2014 rules: ['Voltage Drop Below Threshold ==> Overdischarge'], failures: ['Overdischarge']",
+      "matched_rules": [
+        {
+          "rule": "Voltage Drop Below Threshold ==> Overdischarge",
+          "matched_conditions": [
+            "voltage_drop"
+          ],
+          "implied_failure": "Overdischarge",
+          "failure_uri": "http://example.org/battery-ontology#Overdischarge"
+        }
+      ]
+    },
+    "patterns_observed": [
+      "voltage_drop"
+    ],
+    "stage3_decision": "validated",
+    "stage4_reasoning": "confirmed",
+    "failure_modes": [
+      "Overdischarge"
+    ],
+    "stage5_decision": "skipped_existing"
+  },
+  {
+    "sample_idx": 77,
+    "anomaly_id": "",
+    "anomaly_type": "normal",
+    "injection_subtype": "",
+    "is_anomaly_gt": false,
+    "cell_id": "MIT_b1_cell007",
+    "cycle": 675,
+    "raw_score": 0.01381639763712883,
+    "normalized_score": 0.5748940706253052,
+    "threshold": 0.012016472406685352,
+    "threshold_crossed": true,
+    "confidence_gate": {
+      "passed": true,
+      "reason": "Score 0.5749 >= 0.2"
+    },
+    "temporal_consistency": {
+      "passed": true,
+      "reason": "Anomaly in 3/3 windows (need 1/3)",
+      "count": 3
+    },
+    "semantic_cross_validation": {
+      "passed": true,
+      "reason": "Semantically validated \u2014 rules: ['Voltage Drop Below Threshold ==> Overdischarge'], failures: ['Overdischarge']",
+      "matched_rules": [
+        {
+          "rule": "Voltage Drop Below Threshold ==> Overdischarge",
+          "matched_conditions": [
+            "voltage_drop"
+          ],
+          "implied_failure": "Overdischarge",
+          "failure_uri": "http://example.org/battery-ontology#Overdischarge"
+        }
+      ]
+    },
+    "patterns_observed": [
+      "voltage_drop"
+    ],
+    "stage3_decision": "validated",
+    "stage4_reasoning": "confirmed",
+    "failure_modes": [
+      "Overdischarge"
+    ],
+    "stage5_decision": "skipped_existing"
+  },
+  {
+    "sample_idx": 78,
+    "anomaly_id": "",
+    "anomaly_type": "normal",
+    "injection_subtype": "",
+    "is_anomaly_gt": false,
+    "cell_id": "MIT_b1_cell007",
+    "cycle": 771,
+    "raw_score": 0.015469932928681374,
+    "normalized_score": 0.6436969637870789,
+    "threshold": 0.012016472406685352,
+    "threshold_crossed": true,
+    "confidence_gate": {
+      "passed": true,
+      "reason": "Score 0.6437 >= 0.2"
+    },
+    "temporal_consistency": {
+      "passed": true,
+      "reason": "Anomaly in 3/3 windows (need 1/3)",
+      "count": 3
+    },
+    "semantic_cross_validation": {
+      "passed": true,
+      "reason": "Semantically validated \u2014 rules: ['Voltage Drop Below Threshold ==> Overdischarge'], failures: ['Overdischarge']",
+      "matched_rules": [
+        {
+          "rule": "Voltage Drop Below Threshold ==> Overdischarge",
+          "matched_conditions": [
+            "voltage_drop"
+          ],
+          "implied_failure": "Overdischarge",
+          "failure_uri": "http://example.org/battery-ontology#Overdischarge"
+        }
+      ]
+    },
+    "patterns_observed": [
+      "voltage_drop"
+    ],
+    "stage3_decision": "validated",
+    "stage4_reasoning": "confirmed",
+    "failure_modes": [
+      "Overdischarge"
+    ],
+    "stage5_decision": "skipped_existing"
+  },
+  {
+    "sample_idx": 79,
+    "anomaly_id": "",
+    "anomaly_type": "normal",
+    "injection_subtype": "",
+    "is_anomaly_gt": false,
+    "cell_id": "MIT_b1_cell007",
+    "cycle": 867,
+    "raw_score": 0.017076725140213966,
+    "normalized_score": 0.710554838180542,
+    "threshold": 0.012016472406685352,
+    "threshold_crossed": true,
+    "confidence_gate": {
+      "passed": true,
+      "reason": "Score 0.7106 >= 0.2"
+    },
+    "temporal_consistency": {
+      "passed": true,
+      "reason": "Anomaly in 3/3 windows (need 1/3)",
+      "count": 3
+    },
+    "semantic_cross_validation": {
+      "passed": true,
+      "reason": "Semantically validated \u2014 rules: ['Voltage Drop Below Threshold ==> Overdischarge'], failures: ['Overdischarge']",
+      "matched_rules": [
+        {
+          "rule": "Voltage Drop Below Threshold ==> Overdischarge",
+          "matched_conditions": [
+            "voltage_drop"
+          ],
+          "implied_failure": "Overdischarge",
+          "failure_uri": "http://example.org/battery-ontology#Overdischarge"
+        }
+      ]
+    },
+    "patterns_observed": [
+      "voltage_drop"
+    ],
+    "stage3_decision": "validated",
+    "stage4_reasoning": "confirmed",
+    "failure_modes": [
+      "Overdischarge"
+    ],
+    "stage5_decision": "skipped_existing"
+  }
+]

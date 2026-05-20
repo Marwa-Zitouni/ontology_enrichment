@@ -1,0 +1,70 @@
+{
+  "n_added": 15,
+  "n_removed": 0,
+  "added_classes": [
+    "http://example.org/battery-ontology#AbnormalTemperatureRise",
+    "http://example.org/battery-ontology#MissingSensorSegment",
+    "http://example.org/battery-ontology#SensorNoiseBurst"
+  ],
+  "added_object_properties": [],
+  "added_datatype_properties": [],
+  "added_subclass_axioms": [
+    {
+      "subject": "http://example.org/battery-ontology#AbnormalTemperatureRise",
+      "object": "http://example.org/battery-ontology#FailureMode"
+    },
+    {
+      "subject": "http://example.org/battery-ontology#SensorNoiseBurst",
+      "object": "http://example.org/battery-ontology#FailureMode"
+    },
+    {
+      "subject": "http://example.org/battery-ontology#MissingSensorSegment",
+      "object": "http://example.org/battery-ontology#FailureMode"
+    }
+  ],
+  "added_label_axioms": [
+    {
+      "subject": "http://example.org/battery-ontology#SensorNoiseBurst",
+      "label": "Sensor Noise Burst"
+    },
+    {
+      "subject": "http://example.org/battery-ontology#AbnormalTemperatureRise",
+      "label": "Abnormal Temperature Rise"
+    },
+    {
+      "subject": "http://example.org/battery-ontology#MissingSensorSegment",
+      "label": "Missing Sensor Segment"
+    }
+  ],
+  "added_leadsTo_axioms": [
+    {
+      "from": "http://example.org/battery-ontology#AbnormalTemperatureRise",
+      "to": "http://example.org/battery-ontology#Overdischarge"
+    },
+    {
+      "from": "http://example.org/battery-ontology#SensorNoiseBurst",
+      "to": "http://example.org/battery-ontology#Overdischarge"
+    },
+    {
+      "from": "http://example.org/battery-ontology#MissingSensorSegment",
+      "to": "http://example.org/battery-ontology#Overdischarge"
+    }
+  ],
+  "added_other_axioms": [
+    {
+      "subject": "http://example.org/battery-ontology#SensorNoiseBurst",
+      "predicate": "http://www.w3.org/2000/01/rdf-schema#comment",
+      "object": "A sudden and unexpected increase in noise levels in the battery system."
+    },
+    {
+      "subject": "http://example.org/battery-ontology#AbnormalTemperatureRise",
+      "predicate": "http://www.w3.org/2000/01/rdf-schema#comment",
+      "object": "This subtype occurs when an unusual temperature increase is detected, potentially leading to a broader failure mode."
+    },
+    {
+      "subject": "http://example.org/battery-ontology#MissingSensorSegment",
+      "predicate": "http://www.w3.org/2000/01/rdf-schema#comment",
+      "object": "In this case, the anomaly is characterized by a missing segment in the sensor data."
+    }
+  ]
+}

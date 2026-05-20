@@ -1,0 +1,146 @@
+[
+  {
+    "llm": "Qwen2.5-1.5B-Instruct",
+    "model_id": "Qwen/Qwen2.5-1.5B-Instruct",
+    "seconds": 52.37732982635498,
+    "proposal": {
+      "new_anomaly_types": [
+        {
+          "name": "ThermalRunAwaySubtype",
+          "label": "Thermal Runaway Subtype",
+          "description": "An unexpected increase in temperature leading to potential damage or failure.",
+          "parent_class": "FailureMode"
+        }
+      ],
+      "new_causal_relationships": [
+        {
+          "from": "http://example.org/battery-ontology#ThermalRunAwaySubtype",
+          "to": "http://example.org/battery-ontology#Overdischarge",
+          "description": "Thermal Runaway Subtype can lead to Overdischarge."
+        },
+        {
+          "from": "http://example.org/battery-ontology#ThermalRunAwaySubtype",
+          "to": "http://example.org/battery-ontology#Overdischarge",
+          "description": ""
+        }
+      ],
+      "new_properties": [],
+      "rdf_triples": [
+        {
+          "subject": "http://example.org/battery-ontology#ThermalRunAwaySubtype",
+          "predicate": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+          "object": "http://www.w3.org/2002/07/owl#Class"
+        },
+        {
+          "subject": "http://example.org/battery-ontology#ThermalRunAwaySubtype",
+          "predicate": "http://www.w3.org/2000/01/rdf-schema#subClassOf",
+          "object": "http://example.org/battery-ontology#FailureMode"
+        },
+        {
+          "subject": "http://example.org/battery-ontology#ThermalRunAwaySubtype",
+          "predicate": "http://www.w3.org/2000/01/rdf-schema#label",
+          "object": "Thermal Runaway Subtype"
+        },
+        {
+          "subject": "http://example.org/battery-ontology#ThermalRunAwaySubtype",
+          "predicate": "http://www.w3.org/2000/01/rdf-schema#comment",
+          "object": "An unexpected increase in temperature leading to potential damage or failure."
+        },
+        {
+          "subject": "http://example.org/battery-ontology#ThermalRunAwaySubtype",
+          "predicate": "http://example.org/battery-ontology#leadsTo",
+          "object": "http://example.org/battery-ontology#Overdischarge"
+        },
+        {
+          "subject": "http://example.org/battery-ontology#ThermalRunAwaySubtype",
+          "predicate": "http://example.org/battery-ontology#leadsTo",
+          "object": "http://example.org/battery-ontology#Overdischarge"
+        }
+      ],
+      "_parse_error": null
+    },
+    "scores": {
+      "schema_validity": 1.0,
+      "domain_plausibility": 1.0,
+      "novelty_one_minus_redundancy": 1.0,
+      "consistency_with_ontology": 1.0,
+      "usefulness": 1.0,
+      "schema_valid_flag": true,
+      "n_types": 1,
+      "n_relationships": 2,
+      "n_triples": 6
+    }
+  },
+  {
+    "llm": "Phi-3-mini-4k",
+    "model_id": "microsoft/Phi-3-mini-4k-instruct",
+    "seconds": 229.78517770767212,
+    "proposal": {
+      "new_anomaly_types": [
+        {
+          "name": "ThermalRunawayDueToVoltageDrop",
+          "label": "Thermal Runaway Caused by Voltage Drop",
+          "description": "This subtype describes thermal runaway incidents specifically triggered by a voltage drop in the battery.",
+          "parent_class": "FailureMode"
+        }
+      ],
+      "new_causal_relationships": [
+        {
+          "from": "http://example.org/battery-ontology#ThermalRunawayDueToVoltageDrop",
+          "to": "http://example.org/battery-ontology#Overdischarge",
+          "description": "Thermal Runaway Caused by Voltage Drop can lead to Overdischarge."
+        },
+        {
+          "from": "http://example.org/battery-ontology#ThermalRunawayDueToVoltageDrop",
+          "to": "http://example.org/battery-ontology#Overdischarge",
+          "description": ""
+        }
+      ],
+      "new_properties": [],
+      "rdf_triples": [
+        {
+          "subject": "http://example.org/battery-ontology#ThermalRunawayDueToVoltageDrop",
+          "predicate": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+          "object": "http://www.w3.org/2002/07/owl#Class"
+        },
+        {
+          "subject": "http://example.org/battery-ontology#ThermalRunawayDueToVoltageDrop",
+          "predicate": "http://www.w3.org/2000/01/rdf-schema#subClassOf",
+          "object": "http://example.org/battery-ontology#FailureMode"
+        },
+        {
+          "subject": "http://example.org/battery-ontology#ThermalRunawayDueToVoltageDrop",
+          "predicate": "http://www.w3.org/2000/01/rdf-schema#label",
+          "object": "Thermal Runaway Caused by Voltage Drop"
+        },
+        {
+          "subject": "http://example.org/battery-ontology#ThermalRunawayDueToVoltageDrop",
+          "predicate": "http://www.w3.org/2000/01/rdf-schema#comment",
+          "object": "This subtype describes thermal runaway incidents specifically triggered by a voltage drop in the battery."
+        },
+        {
+          "subject": "http://example.org/battery-ontology#ThermalRunawayDueToVoltageDrop",
+          "predicate": "http://example.org/battery-ontology#leadsTo",
+          "object": "http://example.org/battery-ontology#Overdischarge"
+        },
+        {
+          "subject": "http://example.org/battery-ontology#ThermalRunawayDueToVoltageDrop",
+          "predicate": "http://example.org/battery-ontology#leadsTo",
+          "object": "http://example.org/battery-ontology#Overdischarge"
+        }
+      ],
+      "_parse_error": null
+    },
+    "scores": {
+      "schema_validity": 1.0,
+      "domain_plausibility": 1.0,
+      "novelty_one_minus_redundancy": 1.0,
+      "consistency_with_ontology": 1.0,
+      "usefulness": 1.0,
+      "schema_valid_flag": true,
+      "n_types": 1,
+      "n_relationships": 2,
+      "n_triples": 6
+    }
+  }
+]

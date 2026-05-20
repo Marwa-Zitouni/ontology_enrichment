@@ -1,0 +1,383 @@
+[
+  {
+    "sample_idx": 28,
+    "anomaly_id": "A2",
+    "anomaly_type": "thermal_runaway",
+    "trigger_path": "confirmed",
+    "llm_seconds": 59.22759652137756,
+    "raw_proposal": {
+      "new_anomaly_types": [
+        {
+          "name": "AbnormalTemperatureRise",
+          "label": "Abnormal Temperature Rise",
+          "description": "An abnormal temperature rise event.",
+          "parent_class": "FailureMode"
+        }
+      ],
+      "new_causal_relationships": [
+        {
+          "from": "http://example.org/battery-ontology#AbnormalTemperatureRise",
+          "to": "http://example.org/battery-ontology#Overdischarge",
+          "description": "Abnormal Temperature Rise can lead to Overdischarge."
+        },
+        {
+          "from": "http://example.org/battery-ontology#AbnormalTemperatureRise",
+          "to": "http://example.org/battery-ontology#Overdischarge",
+          "description": ""
+        }
+      ],
+      "new_properties": [],
+      "rdf_triples": [
+        {
+          "subject": "http://example.org/battery-ontology#AbnormalTemperatureRise",
+          "predicate": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+          "object": "http://www.w3.org/2002/07/owl#Class"
+        },
+        {
+          "subject": "http://example.org/battery-ontology#AbnormalTemperatureRise",
+          "predicate": "http://www.w3.org/2000/01/rdf-schema#subClassOf",
+          "object": "http://example.org/battery-ontology#FailureMode"
+        },
+        {
+          "subject": "http://example.org/battery-ontology#AbnormalTemperatureRise",
+          "predicate": "http://www.w3.org/2000/01/rdf-schema#label",
+          "object": "Abnormal Temperature Rise"
+        },
+        {
+          "subject": "http://example.org/battery-ontology#AbnormalTemperatureRise",
+          "predicate": "http://www.w3.org/2000/01/rdf-schema#comment",
+          "object": "An abnormal temperature rise event."
+        },
+        {
+          "subject": "http://example.org/battery-ontology#AbnormalTemperatureRise",
+          "predicate": "http://example.org/battery-ontology#leadsTo",
+          "object": "http://example.org/battery-ontology#Overdischarge"
+        },
+        {
+          "subject": "http://example.org/battery-ontology#AbnormalTemperatureRise",
+          "predicate": "http://example.org/battery-ontology#leadsTo",
+          "object": "http://example.org/battery-ontology#Overdischarge"
+        }
+      ],
+      "_parse_error": null
+    },
+    "pre_filtered_duplicates": {
+      "types": [],
+      "relationships": []
+    },
+    "fallback_used": false,
+    "fallback_reason": null,
+    "human_review_result": {
+      "accepted_types": [
+        {
+          "name": "AbnormalTemperatureRise",
+          "label": "Abnormal Temperature Rise",
+          "description": "An abnormal temperature rise event.",
+          "parent_class": "FailureMode"
+        }
+      ],
+      "accepted_relationships": [
+        {
+          "from": "http://example.org/battery-ontology#AbnormalTemperatureRise",
+          "to": "http://example.org/battery-ontology#Overdischarge",
+          "description": "Abnormal Temperature Rise can lead to Overdischarge."
+        },
+        {
+          "from": "http://example.org/battery-ontology#AbnormalTemperatureRise",
+          "to": "http://example.org/battery-ontology#Overdischarge",
+          "description": ""
+        }
+      ],
+      "accepted_triples": [
+        {
+          "subject": "http://example.org/battery-ontology#AbnormalTemperatureRise",
+          "predicate": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+          "object": "http://www.w3.org/2002/07/owl#Class"
+        },
+        {
+          "subject": "http://example.org/battery-ontology#AbnormalTemperatureRise",
+          "predicate": "http://www.w3.org/2000/01/rdf-schema#subClassOf",
+          "object": "http://example.org/battery-ontology#FailureMode"
+        },
+        {
+          "subject": "http://example.org/battery-ontology#AbnormalTemperatureRise",
+          "predicate": "http://www.w3.org/2000/01/rdf-schema#label",
+          "object": "Abnormal Temperature Rise"
+        },
+        {
+          "subject": "http://example.org/battery-ontology#AbnormalTemperatureRise",
+          "predicate": "http://www.w3.org/2000/01/rdf-schema#comment",
+          "object": "An abnormal temperature rise event."
+        },
+        {
+          "subject": "http://example.org/battery-ontology#AbnormalTemperatureRise",
+          "predicate": "http://example.org/battery-ontology#leadsTo",
+          "object": "http://example.org/battery-ontology#Overdischarge"
+        },
+        {
+          "subject": "http://example.org/battery-ontology#AbnormalTemperatureRise",
+          "predicate": "http://example.org/battery-ontology#leadsTo",
+          "object": "http://example.org/battery-ontology#Overdischarge"
+        }
+      ],
+      "rejected_items": [],
+      "reviewer_notes": ""
+    },
+    "stage6_validation_decision": "accepted",
+    "stage7_triples_added": 12
+  },
+  {
+    "sample_idx": 37,
+    "anomaly_id": "A4",
+    "anomaly_type": "overcharge",
+    "trigger_path": "confirmed",
+    "llm_seconds": 59.3827428817749,
+    "raw_proposal": {
+      "new_anomaly_types": [
+        {
+          "name": "SensorNoiseBurst",
+          "label": "Sensor Noise Burst",
+          "description": "An unexpected noise event detected on sensors leading to voltage drop.",
+          "parent_class": "FailureMode"
+        }
+      ],
+      "new_causal_relationships": [
+        {
+          "from": "http://example.org/battery-ontology#SensorNoiseBurst",
+          "to": "http://example.org/battery-ontology#Overdischarge",
+          "description": "Sensor Noise Burst can lead to Overdischarge."
+        },
+        {
+          "from": "http://example.org/battery-ontology#SensorNoiseBurst",
+          "to": "http://example.org/battery-ontology#Overdischarge",
+          "description": ""
+        }
+      ],
+      "new_properties": [],
+      "rdf_triples": [
+        {
+          "subject": "http://example.org/battery-ontology#SensorNoiseBurst",
+          "predicate": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+          "object": "http://www.w3.org/2002/07/owl#Class"
+        },
+        {
+          "subject": "http://example.org/battery-ontology#SensorNoiseBurst",
+          "predicate": "http://www.w3.org/2000/01/rdf-schema#subClassOf",
+          "object": "http://example.org/battery-ontology#FailureMode"
+        },
+        {
+          "subject": "http://example.org/battery-ontology#SensorNoiseBurst",
+          "predicate": "http://www.w3.org/2000/01/rdf-schema#label",
+          "object": "Sensor Noise Burst"
+        },
+        {
+          "subject": "http://example.org/battery-ontology#SensorNoiseBurst",
+          "predicate": "http://www.w3.org/2000/01/rdf-schema#comment",
+          "object": "An unexpected noise event detected on sensors leading to voltage drop."
+        },
+        {
+          "subject": "http://example.org/battery-ontology#SensorNoiseBurst",
+          "predicate": "http://example.org/battery-ontology#leadsTo",
+          "object": "http://example.org/battery-ontology#Overdischarge"
+        },
+        {
+          "subject": "http://example.org/battery-ontology#SensorNoiseBurst",
+          "predicate": "http://example.org/battery-ontology#leadsTo",
+          "object": "http://example.org/battery-ontology#Overdischarge"
+        }
+      ],
+      "_parse_error": null
+    },
+    "pre_filtered_duplicates": {
+      "types": [],
+      "relationships": []
+    },
+    "fallback_used": false,
+    "fallback_reason": null,
+    "human_review_result": {
+      "accepted_types": [
+        {
+          "name": "SensorNoiseBurst",
+          "label": "Sensor Noise Burst",
+          "description": "An unexpected noise event detected on sensors leading to voltage drop.",
+          "parent_class": "FailureMode"
+        }
+      ],
+      "accepted_relationships": [
+        {
+          "from": "http://example.org/battery-ontology#SensorNoiseBurst",
+          "to": "http://example.org/battery-ontology#Overdischarge",
+          "description": "Sensor Noise Burst can lead to Overdischarge."
+        },
+        {
+          "from": "http://example.org/battery-ontology#SensorNoiseBurst",
+          "to": "http://example.org/battery-ontology#Overdischarge",
+          "description": ""
+        }
+      ],
+      "accepted_triples": [
+        {
+          "subject": "http://example.org/battery-ontology#SensorNoiseBurst",
+          "predicate": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+          "object": "http://www.w3.org/2002/07/owl#Class"
+        },
+        {
+          "subject": "http://example.org/battery-ontology#SensorNoiseBurst",
+          "predicate": "http://www.w3.org/2000/01/rdf-schema#subClassOf",
+          "object": "http://example.org/battery-ontology#FailureMode"
+        },
+        {
+          "subject": "http://example.org/battery-ontology#SensorNoiseBurst",
+          "predicate": "http://www.w3.org/2000/01/rdf-schema#label",
+          "object": "Sensor Noise Burst"
+        },
+        {
+          "subject": "http://example.org/battery-ontology#SensorNoiseBurst",
+          "predicate": "http://www.w3.org/2000/01/rdf-schema#comment",
+          "object": "An unexpected noise event detected on sensors leading to voltage drop."
+        },
+        {
+          "subject": "http://example.org/battery-ontology#SensorNoiseBurst",
+          "predicate": "http://example.org/battery-ontology#leadsTo",
+          "object": "http://example.org/battery-ontology#Overdischarge"
+        },
+        {
+          "subject": "http://example.org/battery-ontology#SensorNoiseBurst",
+          "predicate": "http://example.org/battery-ontology#leadsTo",
+          "object": "http://example.org/battery-ontology#Overdischarge"
+        }
+      ],
+      "rejected_items": [],
+      "reviewer_notes": ""
+    },
+    "stage6_validation_decision": "accepted",
+    "stage7_triples_added": 12
+  },
+  {
+    "sample_idx": 49,
+    "anomaly_id": "A6",
+    "anomaly_type": "thermal_runaway",
+    "trigger_path": "confirmed",
+    "llm_seconds": 59.90460181236267,
+    "raw_proposal": {
+      "new_anomaly_types": [
+        {
+          "name": "MissingSensorSegment",
+          "label": "Missing Sensor Segment",
+          "description": "Describes a situation where there is no data collected from a sensor segment.",
+          "parent_class": "FailureMode"
+        }
+      ],
+      "new_causal_relationships": [
+        {
+          "from": "http://example.org/battery-ontology#MissingSensorSegment",
+          "to": "http://example.org/battery-ontology#Overdischarge",
+          "description": "Missing Sensor Segment can lead to Overdischarge."
+        },
+        {
+          "from": "http://example.org/battery-ontology#MissingSensorSegment",
+          "to": "http://example.org/battery-ontology#Overdischarge",
+          "description": ""
+        }
+      ],
+      "new_properties": [],
+      "rdf_triples": [
+        {
+          "subject": "http://example.org/battery-ontology#MissingSensorSegment",
+          "predicate": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+          "object": "http://www.w3.org/2002/07/owl#Class"
+        },
+        {
+          "subject": "http://example.org/battery-ontology#MissingSensorSegment",
+          "predicate": "http://www.w3.org/2000/01/rdf-schema#subClassOf",
+          "object": "http://example.org/battery-ontology#FailureMode"
+        },
+        {
+          "subject": "http://example.org/battery-ontology#MissingSensorSegment",
+          "predicate": "http://www.w3.org/2000/01/rdf-schema#label",
+          "object": "Missing Sensor Segment"
+        },
+        {
+          "subject": "http://example.org/battery-ontology#MissingSensorSegment",
+          "predicate": "http://www.w3.org/2000/01/rdf-schema#comment",
+          "object": "Describes a situation where there is no data collected from a sensor segment."
+        },
+        {
+          "subject": "http://example.org/battery-ontology#MissingSensorSegment",
+          "predicate": "http://example.org/battery-ontology#leadsTo",
+          "object": "http://example.org/battery-ontology#Overdischarge"
+        },
+        {
+          "subject": "http://example.org/battery-ontology#MissingSensorSegment",
+          "predicate": "http://example.org/battery-ontology#leadsTo",
+          "object": "http://example.org/battery-ontology#Overdischarge"
+        }
+      ],
+      "_parse_error": null
+    },
+    "pre_filtered_duplicates": {
+      "types": [],
+      "relationships": []
+    },
+    "fallback_used": false,
+    "fallback_reason": null,
+    "human_review_result": {
+      "accepted_types": [
+        {
+          "name": "MissingSensorSegment",
+          "label": "Missing Sensor Segment",
+          "description": "Describes a situation where there is no data collected from a sensor segment.",
+          "parent_class": "FailureMode"
+        }
+      ],
+      "accepted_relationships": [
+        {
+          "from": "http://example.org/battery-ontology#MissingSensorSegment",
+          "to": "http://example.org/battery-ontology#Overdischarge",
+          "description": "Missing Sensor Segment can lead to Overdischarge."
+        },
+        {
+          "from": "http://example.org/battery-ontology#MissingSensorSegment",
+          "to": "http://example.org/battery-ontology#Overdischarge",
+          "description": ""
+        }
+      ],
+      "accepted_triples": [
+        {
+          "subject": "http://example.org/battery-ontology#MissingSensorSegment",
+          "predicate": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+          "object": "http://www.w3.org/2002/07/owl#Class"
+        },
+        {
+          "subject": "http://example.org/battery-ontology#MissingSensorSegment",
+          "predicate": "http://www.w3.org/2000/01/rdf-schema#subClassOf",
+          "object": "http://example.org/battery-ontology#FailureMode"
+        },
+        {
+          "subject": "http://example.org/battery-ontology#MissingSensorSegment",
+          "predicate": "http://www.w3.org/2000/01/rdf-schema#label",
+          "object": "Missing Sensor Segment"
+        },
+        {
+          "subject": "http://example.org/battery-ontology#MissingSensorSegment",
+          "predicate": "http://www.w3.org/2000/01/rdf-schema#comment",
+          "object": "Describes a situation where there is no data collected from a sensor segment."
+        },
+        {
+          "subject": "http://example.org/battery-ontology#MissingSensorSegment",
+          "predicate": "http://example.org/battery-ontology#leadsTo",
+          "object": "http://example.org/battery-ontology#Overdischarge"
+        },
+        {
+          "subject": "http://example.org/battery-ontology#MissingSensorSegment",
+          "predicate": "http://example.org/battery-ontology#leadsTo",
+          "object": "http://example.org/battery-ontology#Overdischarge"
+        }
+      ],
+      "rejected_items": [],
+      "reviewer_notes": ""
+    },
+    "stage6_validation_decision": "accepted",
+    "stage7_triples_added": 12
+  }
+]

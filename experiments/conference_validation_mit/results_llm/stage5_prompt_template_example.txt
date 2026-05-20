@@ -1,0 +1,52 @@
+You are an expert in lithium-ion battery safety and ontology engineering.
+
+A time-series anomaly has been detected. The framework has matched it to a
+broad failure mode that already exists in the ontology, but the
+fine-grained injected subtype is missing. Your job is to propose the
+missing subtype as a new OWL class with a `leadsTo` edge to the broad mode.
+
+## Detected Anomaly
+- Anomaly ID: A2
+- Channel/Type: thermal_runaway
+- Anomaly Score: 0.51
+- Observed Patterns: ['temperature_rise', 'voltage_drop']
+- Broad (matched) Failure Mode: Overdischarge
+- Missing Fine-Grained Subtype: AbnormalTemperatureRise
+
+## Already-Known Failure Modes (DO NOT PROPOSE AGAIN)
+['Overheating', 'Overcharge', 'Overdischarge', 'ThermalRunaway', 'InternalShortCircuit', 'CapacityFade']
+
+## CRITICAL CONSTRAINTS
+- The matched broad failure mode is `Overdischarge` and it ALREADY EXISTS in the ontology.
+- The missing fine-grained subtype is `AbnormalTemperatureRise` (human label: "Abnormal Temperature Rise").
+- You MUST propose `AbnormalTemperatureRise` as the new class.
+- You MUST NOT propose `Overdischarge` as a new class — it is already declared.
+- The new class MUST be `rdfs:subClassOf` `FailureMode`.
+- The new class MUST be linked to `Overdischarge` via `bat:leadsTo`.
+
+## OUTPUT FORMAT
+Return STRICT JSON ONLY. Do NOT wrap in Markdown fences. Do NOT include
+JavaScript-style `//` comments. Do NOT add trailing prose. Do NOT include
+trailing commas. The JSON MUST conform exactly to this schema:
+
+{
+  "new_classes": [
+    {
+      "class_name": "AbnormalTemperatureRise",
+      "parent_class": "FailureMode",
+      "label": "Abnormal Temperature Rise",
+      "comment": "<one-sentence description of the subtype>",
+      "leads_to": "Overdischarge"
+    }
+  ],
+  "new_relationships": [
+    {
+      "subject": "AbnormalTemperatureRise",
+      "predicate": "leadsTo",
+      "object": "Overdischarge"
+    }
+  ],
+  "new_datatype_properties": [],
+  "new_object_properties": [],
+  "property_assertions": []
+}

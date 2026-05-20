@@ -1,0 +1,382 @@
+{
+  "experiment": "Regime B free-discovery LLM sweep on MIT-batch1 (A1-A7), TS-only",
+  "prompt_mode": "free_discovery",
+  "regime_A_reference": {
+    "note": "Regime A (conservative) detector misses every injected anomaly under the p95 threshold and fires 0 Stage-5 calls. Included here only as the filter-protective reference run; the LLM comparison runs under Regime B.",
+    "summary": {
+      "regime": "Regime A (conservative)",
+      "threshold_percentile": 95,
+      "threshold": 0.015278482809662819,
+      "confidence_threshold": 0.55,
+      "temporal_k": 2,
+      "temporal_n": 3,
+      "n_total_windows": 80,
+      "n_normal": 73,
+      "n_anomalous": 7,
+      "n_predicted_anomaly": 4,
+      "metrics_pre_filter": {
+        "TP": 0,
+        "FP": 4,
+        "FN": 7,
+        "TN": 69,
+        "precision": 0.0,
+        "recall": 0.0,
+        "F1": 0.0
+      },
+      "metrics": {
+        "TP": 0,
+        "FP": 4,
+        "FN": 7,
+        "TN": 69,
+        "precision": 0.0,
+        "recall": 0.0,
+        "F1": 0.0
+      },
+      "metrics_post_stage3": {
+        "TP": 0,
+        "FP": 1,
+        "FN": 7,
+        "TN": 72,
+        "precision": 0.0,
+        "recall": 0.0,
+        "F1": 0.0
+      },
+      "n_candidates_post_stage3_validated": 1,
+      "n_stage5_calls": 0,
+      "n_stage7_triples_added_total": 0
+    }
+  },
+  "regime_B_runs": [
+    {
+      "llm_key": "qwen",
+      "llm_name": "Qwen2.5-1.5B-Instruct",
+      "llm_model_id": "Qwen/Qwen2.5-1.5B-Instruct",
+      "device": "cpu",
+      "regime": "Regime B (permissive)",
+      "prompt_mode": "free_discovery",
+      "threshold": 0.012016472406685352,
+      "pre_filter": {
+        "TP": 3,
+        "FP": 37,
+        "FN": 4,
+        "TN": 36,
+        "precision": 0.075,
+        "recall": 0.42857142857142855,
+        "F1": 0.1276595744680851
+      },
+      "post_filter": {
+        "TP": 3,
+        "FP": 37,
+        "FN": 4,
+        "TN": 36,
+        "precision": 0.075,
+        "recall": 0.42857142857142855,
+        "F1": 0.1276595744680851
+      },
+      "n_candidates_post_stage3_validated": 40,
+      "n_stage5_calls": 3,
+      "n_stage7_triples_added_total": 0,
+      "ontology_diff": {
+        "n_added": 0,
+        "added_classes": [],
+        "added_object_properties": [],
+        "added_datatype_properties": []
+      },
+      "llm_load_seconds": 24.40211844444275,
+      "regime_total_seconds": 249.8319845199585,
+      "stage5_total_llm_seconds": 249.06190872192383,
+      "n_fallback_activations": 0,
+      "n_parse_errors": 0,
+      "decision_counts": {
+        "no_update": 3
+      },
+      "mean_confidence": null,
+      "n_duplicate_risk_flags": 0,
+      "per_call_records": [
+        {
+          "anomaly_id": "A2",
+          "trigger_path": "confirmed",
+          "llm_seconds": 87.4924476146698,
+          "fallback_used": false,
+          "fallback_reason": null,
+          "stage6_validation_decision": "rejected",
+          "stage7_triples_added": 0,
+          "decision": "no_update",
+          "confidences": [],
+          "duplicate_risk_flags": [],
+          "proposed_classes": []
+        },
+        {
+          "anomaly_id": "A4",
+          "trigger_path": "confirmed",
+          "llm_seconds": 80.3426353931427,
+          "fallback_used": false,
+          "fallback_reason": null,
+          "stage6_validation_decision": "rejected",
+          "stage7_triples_added": 0,
+          "decision": "no_update",
+          "confidences": [],
+          "duplicate_risk_flags": [],
+          "proposed_classes": []
+        },
+        {
+          "anomaly_id": "A6",
+          "trigger_path": "confirmed",
+          "llm_seconds": 81.22682571411133,
+          "fallback_used": false,
+          "fallback_reason": null,
+          "stage6_validation_decision": "rejected",
+          "stage7_triples_added": 0,
+          "decision": "no_update",
+          "confidences": [],
+          "duplicate_risk_flags": [],
+          "proposed_classes": []
+        }
+      ]
+    },
+    {
+      "llm_key": "phi3",
+      "llm_name": "Phi-3-mini-4k-instruct",
+      "llm_model_id": "microsoft/Phi-3-mini-4k-instruct",
+      "device": "cpu",
+      "regime": "Regime B (permissive)",
+      "prompt_mode": "free_discovery",
+      "threshold": 0.012016472406685352,
+      "pre_filter": {
+        "TP": 3,
+        "FP": 37,
+        "FN": 4,
+        "TN": 36,
+        "precision": 0.075,
+        "recall": 0.42857142857142855,
+        "F1": 0.1276595744680851
+      },
+      "post_filter": {
+        "TP": 3,
+        "FP": 37,
+        "FN": 4,
+        "TN": 36,
+        "precision": 0.075,
+        "recall": 0.42857142857142855,
+        "F1": 0.1276595744680851
+      },
+      "n_candidates_post_stage3_validated": 40,
+      "n_stage5_calls": 3,
+      "n_stage7_triples_added_total": 24,
+      "ontology_diff": {
+        "n_added": 14,
+        "added_classes": [
+          "http://example.org/battery-ontology#AnomalyDuringTemperatureRise",
+          "http://example.org/battery-ontology#VoltageDropAnomaly"
+        ],
+        "added_object_properties": [],
+        "added_datatype_properties": []
+      },
+      "llm_load_seconds": 1.0559041500091553,
+      "regime_total_seconds": 1462.0312402248383,
+      "stage5_total_llm_seconds": 1461.392140865326,
+      "n_fallback_activations": 0,
+      "n_parse_errors": 0,
+      "decision_counts": {
+        "add": 3
+      },
+      "mean_confidence": 0.9099999999999999,
+      "n_duplicate_risk_flags": 2,
+      "per_call_records": [
+        {
+          "anomaly_id": "A2",
+          "trigger_path": "confirmed",
+          "llm_seconds": 586.8912749290466,
+          "fallback_used": false,
+          "fallback_reason": null,
+          "stage6_validation_decision": "accepted",
+          "stage7_triples_added": 10,
+          "decision": "add",
+          "confidences": [
+            0.9,
+            0.9
+          ],
+          "duplicate_risk_flags": [
+            {
+              "candidate": "AnomalyDuringTemperatureRise",
+              "similar_existing_class": "Anomaly",
+              "risk": "low",
+              "reason": "This new class captures a specific type of anomaly (temperature rise) during battery operation, which is not covered by the existing 'Anomaly' class."
+            }
+          ],
+          "proposed_classes": [
+            "AnomalyDuringTemperatureRise"
+          ]
+        },
+        {
+          "anomaly_id": "A4",
+          "trigger_path": "confirmed",
+          "llm_seconds": 500.9783356189728,
+          "fallback_used": false,
+          "fallback_reason": null,
+          "stage6_validation_decision": "accepted",
+          "stage7_triples_added": 10,
+          "decision": "add",
+          "confidences": [
+            0.95,
+            0.9
+          ],
+          "duplicate_risk_flags": [
+            {
+              "candidate": "VoltageDropAnomaly",
+              "similar_existing_class": "Overdischarge",
+              "risk": "low",
+              "reason": "While related, Overdischarge is a broader failure mode that encompasses various symptoms, including voltage drop. VoltageDropAnomaly provides a more precise classification for the observed pattern."
+            }
+          ],
+          "proposed_classes": [
+            "VoltageDropAnomaly"
+          ]
+        },
+        {
+          "anomaly_id": "A6",
+          "trigger_path": "confirmed",
+          "llm_seconds": 373.5225303173065,
+          "fallback_used": false,
+          "fallback_reason": null,
+          "stage6_validation_decision": "accepted",
+          "stage7_triples_added": 4,
+          "decision": "add",
+          "confidences": [
+            0.9
+          ],
+          "duplicate_risk_flags": [],
+          "proposed_classes": [
+            "VoltageDropAnomaly"
+          ]
+        }
+      ]
+    },
+    {
+      "llm_key": "smollm2",
+      "llm_name": "SmolLM2-1.7B-Instruct",
+      "llm_model_id": "HuggingFaceTB/SmolLM2-1.7B-Instruct",
+      "device": "cpu",
+      "regime": "Regime B (permissive)",
+      "prompt_mode": "free_discovery",
+      "threshold": 0.012016472406685352,
+      "pre_filter": {
+        "TP": 3,
+        "FP": 37,
+        "FN": 4,
+        "TN": 36,
+        "precision": 0.075,
+        "recall": 0.42857142857142855,
+        "F1": 0.1276595744680851
+      },
+      "post_filter": {
+        "TP": 3,
+        "FP": 37,
+        "FN": 4,
+        "TN": 36,
+        "precision": 0.075,
+        "recall": 0.42857142857142855,
+        "F1": 0.1276595744680851
+      },
+      "n_candidates_post_stage3_validated": 40,
+      "n_stage5_calls": 3,
+      "n_stage7_triples_added_total": 30,
+      "ontology_diff": {
+        "n_added": 16,
+        "added_classes": [
+          "http://example.org/battery-ontology#MissingSensorSegment",
+          "http://example.org/battery-ontology#Overvoltage_anomaly",
+          "http://example.org/battery-ontology#SensorNoiseBurst"
+        ],
+        "added_object_properties": [],
+        "added_datatype_properties": []
+      },
+      "llm_load_seconds": 1.102055311203003,
+      "regime_total_seconds": 517.0474371910095,
+      "stage5_total_llm_seconds": 516.3802025318146,
+      "n_fallback_activations": 2,
+      "n_parse_errors": 0,
+      "decision_counts": {
+        "add": 3
+      },
+      "mean_confidence": 0.8400000000000001,
+      "n_duplicate_risk_flags": 3,
+      "per_call_records": [
+        {
+          "anomaly_id": "A2",
+          "trigger_path": "confirmed",
+          "llm_seconds": 183.8831970691681,
+          "fallback_used": false,
+          "fallback_reason": null,
+          "stage6_validation_decision": "accepted",
+          "stage7_triples_added": 10,
+          "decision": "add",
+          "confidences": [
+            0.9,
+            0.8
+          ],
+          "duplicate_risk_flags": [
+            {
+              "candidate": "Overvoltage_anomaly",
+              "similar_existing_class": "Overcurrent",
+              "risk": "high",
+              "reason": "This anomaly is characterized by voltage exceeding the nominal value, which is the same as the characteristic of Overcurrent."
+            }
+          ],
+          "proposed_classes": [
+            "Overvoltage_anomaly"
+          ]
+        },
+        {
+          "anomaly_id": "A4",
+          "trigger_path": "confirmed",
+          "llm_seconds": 162.20979642868042,
+          "fallback_used": true,
+          "fallback_reason": "duplicate_only_proposal",
+          "stage6_validation_decision": "accepted",
+          "stage7_triples_added": 10,
+          "decision": "add",
+          "confidences": [
+            0.7,
+            0.8
+          ],
+          "duplicate_risk_flags": [
+            {
+              "candidate": "OverCharge",
+              "similar_existing_class": "Overcurrent",
+              "risk": "low",
+              "reason": "Overcurrent is already captured by an existing class, so adding OverCharge is not necessary."
+            }
+          ],
+          "proposed_classes": [
+            "SensorNoiseBurst"
+          ]
+        },
+        {
+          "anomaly_id": "A6",
+          "trigger_path": "confirmed",
+          "llm_seconds": 170.28720903396606,
+          "fallback_used": true,
+          "fallback_reason": "duplicate_only_proposal",
+          "stage6_validation_decision": "accepted",
+          "stage7_triples_added": 10,
+          "decision": "add",
+          "confidences": [
+            1.0
+          ],
+          "duplicate_risk_flags": [
+            {
+              "candidate": "Overdischarge",
+              "similar_existing_class": "Overcharge",
+              "risk": "high",
+              "reason": "Overdischarge is a subclass of Overcharge, and there is a high risk of duplicates given the similar observed patterns and anomaly scores."
+            }
+          ],
+          "proposed_classes": [
+            "MissingSensorSegment"
+          ]
+        }
+      ]
+    }
+  ]
+}

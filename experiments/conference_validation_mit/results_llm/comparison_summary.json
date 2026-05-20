@@ -1,0 +1,296 @@
+{
+  "experiment": "Regime B real-LLM sweep on MIT-batch1 (A1-A7), TS-only",
+  "regime_A_reference": {
+    "note": "Regime A (conservative) detector misses every injected anomaly under the p95 threshold and fires 0 Stage-5 calls. Included here only as the filter-protective reference run; the LLM comparison runs under Regime B.",
+    "summary": {
+      "regime": "Regime A (conservative)",
+      "threshold_percentile": 95,
+      "threshold": 0.015278482809662819,
+      "confidence_threshold": 0.55,
+      "temporal_k": 2,
+      "temporal_n": 3,
+      "n_total_windows": 80,
+      "n_normal": 73,
+      "n_anomalous": 7,
+      "n_predicted_anomaly": 4,
+      "metrics_pre_filter": {
+        "TP": 0,
+        "FP": 4,
+        "FN": 7,
+        "TN": 69,
+        "precision": 0.0,
+        "recall": 0.0,
+        "F1": 0.0
+      },
+      "metrics": {
+        "TP": 0,
+        "FP": 4,
+        "FN": 7,
+        "TN": 69,
+        "precision": 0.0,
+        "recall": 0.0,
+        "F1": 0.0
+      },
+      "metrics_post_stage3": {
+        "TP": 0,
+        "FP": 1,
+        "FN": 7,
+        "TN": 72,
+        "precision": 0.0,
+        "recall": 0.0,
+        "F1": 0.0
+      },
+      "n_candidates_post_stage3_validated": 1,
+      "n_stage5_calls": 0,
+      "n_stage7_triples_added_total": 0
+    }
+  },
+  "regime_B_runs": [
+    {
+      "llm_key": "qwen",
+      "llm_name": "Qwen2.5-1.5B-Instruct",
+      "llm_model_id": "Qwen/Qwen2.5-1.5B-Instruct",
+      "device": "cpu",
+      "regime": "Regime B (permissive)",
+      "threshold": 0.012016472406685352,
+      "pre_filter": {
+        "TP": 3,
+        "FP": 37,
+        "FN": 4,
+        "TN": 36,
+        "precision": 0.075,
+        "recall": 0.42857142857142855,
+        "F1": 0.1276595744680851
+      },
+      "post_filter": {
+        "TP": 3,
+        "FP": 37,
+        "FN": 4,
+        "TN": 36,
+        "precision": 0.075,
+        "recall": 0.42857142857142855,
+        "F1": 0.1276595744680851
+      },
+      "n_candidates_post_stage3_validated": 40,
+      "n_stage5_calls": 3,
+      "n_stage7_triples_added_total": 36,
+      "ontology_diff": {
+        "n_added": 15,
+        "added_classes": [
+          "http://example.org/battery-ontology#AbnormalTemperatureRise",
+          "http://example.org/battery-ontology#MissingSensorSegment",
+          "http://example.org/battery-ontology#SensorNoiseBurst"
+        ],
+        "added_object_properties": [],
+        "added_datatype_properties": []
+      },
+      "llm_load_seconds": 11.036677360534668,
+      "regime_total_seconds": 169.9521472454071,
+      "stage5_total_llm_seconds": 168.92546439170837,
+      "n_fallback_activations": 0,
+      "n_parse_errors": 0,
+      "per_call_records": [
+        {
+          "anomaly_id": "A2",
+          "trigger_path": "confirmed",
+          "llm_seconds": 56.85714411735535,
+          "fallback_used": false,
+          "fallback_reason": null,
+          "stage6_validation_decision": "accepted",
+          "stage7_triples_added": 12,
+          "proposed_classes": [
+            "AbnormalTemperatureRise"
+          ]
+        },
+        {
+          "anomaly_id": "A4",
+          "trigger_path": "confirmed",
+          "llm_seconds": 55.68577480316162,
+          "fallback_used": false,
+          "fallback_reason": null,
+          "stage6_validation_decision": "accepted",
+          "stage7_triples_added": 12,
+          "proposed_classes": [
+            "SensorNoiseBurst"
+          ]
+        },
+        {
+          "anomaly_id": "A6",
+          "trigger_path": "confirmed",
+          "llm_seconds": 56.382545471191406,
+          "fallback_used": false,
+          "fallback_reason": null,
+          "stage6_validation_decision": "accepted",
+          "stage7_triples_added": 12,
+          "proposed_classes": [
+            "MissingSensorSegment"
+          ]
+        }
+      ]
+    },
+    {
+      "llm_key": "phi3",
+      "llm_name": "Phi-3-mini-4k-instruct",
+      "llm_model_id": "microsoft/Phi-3-mini-4k-instruct",
+      "device": "cpu",
+      "regime": "Regime B (permissive)",
+      "threshold": 0.012016472406685352,
+      "pre_filter": {
+        "TP": 3,
+        "FP": 37,
+        "FN": 4,
+        "TN": 36,
+        "precision": 0.075,
+        "recall": 0.42857142857142855,
+        "F1": 0.1276595744680851
+      },
+      "post_filter": {
+        "TP": 3,
+        "FP": 37,
+        "FN": 4,
+        "TN": 36,
+        "precision": 0.075,
+        "recall": 0.42857142857142855,
+        "F1": 0.1276595744680851
+      },
+      "n_candidates_post_stage3_validated": 40,
+      "n_stage5_calls": 3,
+      "n_stage7_triples_added_total": 36,
+      "ontology_diff": {
+        "n_added": 15,
+        "added_classes": [
+          "http://example.org/battery-ontology#AbnormalTemperatureRise",
+          "http://example.org/battery-ontology#MissingSensorSegment",
+          "http://example.org/battery-ontology#SensorNoiseBurst"
+        ],
+        "added_object_properties": [],
+        "added_datatype_properties": []
+      },
+      "llm_load_seconds": 1.190765142440796,
+      "regime_total_seconds": 578.1333396434784,
+      "stage5_total_llm_seconds": 577.4696750640869,
+      "n_fallback_activations": 0,
+      "n_parse_errors": 0,
+      "per_call_records": [
+        {
+          "anomaly_id": "A2",
+          "trigger_path": "confirmed",
+          "llm_seconds": 193.93951869010925,
+          "fallback_used": false,
+          "fallback_reason": null,
+          "stage6_validation_decision": "accepted",
+          "stage7_triples_added": 12,
+          "proposed_classes": [
+            "AbnormalTemperatureRise"
+          ]
+        },
+        {
+          "anomaly_id": "A4",
+          "trigger_path": "confirmed",
+          "llm_seconds": 184.56439208984375,
+          "fallback_used": false,
+          "fallback_reason": null,
+          "stage6_validation_decision": "accepted",
+          "stage7_triples_added": 12,
+          "proposed_classes": [
+            "SensorNoiseBurst"
+          ]
+        },
+        {
+          "anomaly_id": "A6",
+          "trigger_path": "confirmed",
+          "llm_seconds": 198.9657642841339,
+          "fallback_used": false,
+          "fallback_reason": null,
+          "stage6_validation_decision": "accepted",
+          "stage7_triples_added": 12,
+          "proposed_classes": [
+            "MissingSensorSegment"
+          ]
+        }
+      ]
+    },
+    {
+      "llm_key": "smollm2",
+      "llm_name": "SmolLM2-1.7B-Instruct",
+      "llm_model_id": "HuggingFaceTB/SmolLM2-1.7B-Instruct",
+      "device": "cpu",
+      "regime": "Regime B (permissive)",
+      "threshold": 0.012016472406685352,
+      "pre_filter": {
+        "TP": 3,
+        "FP": 37,
+        "FN": 4,
+        "TN": 36,
+        "precision": 0.075,
+        "recall": 0.42857142857142855,
+        "F1": 0.1276595744680851
+      },
+      "post_filter": {
+        "TP": 3,
+        "FP": 37,
+        "FN": 4,
+        "TN": 36,
+        "precision": 0.075,
+        "recall": 0.42857142857142855,
+        "F1": 0.1276595744680851
+      },
+      "n_candidates_post_stage3_validated": 40,
+      "n_stage5_calls": 3,
+      "n_stage7_triples_added_total": 36,
+      "ontology_diff": {
+        "n_added": 15,
+        "added_classes": [
+          "http://example.org/battery-ontology#AbnormalTemperatureRise",
+          "http://example.org/battery-ontology#MissingSensorSegment",
+          "http://example.org/battery-ontology#SensorNoiseBurst"
+        ],
+        "added_object_properties": [],
+        "added_datatype_properties": []
+      },
+      "llm_load_seconds": 52.81202292442322,
+      "regime_total_seconds": 246.1224172115326,
+      "stage5_total_llm_seconds": 245.458735704422,
+      "n_fallback_activations": 0,
+      "n_parse_errors": 0,
+      "per_call_records": [
+        {
+          "anomaly_id": "A2",
+          "trigger_path": "confirmed",
+          "llm_seconds": 80.08443641662598,
+          "fallback_used": false,
+          "fallback_reason": null,
+          "stage6_validation_decision": "accepted",
+          "stage7_triples_added": 12,
+          "proposed_classes": [
+            "AbnormalTemperatureRise"
+          ]
+        },
+        {
+          "anomaly_id": "A4",
+          "trigger_path": "confirmed",
+          "llm_seconds": 86.0046899318695,
+          "fallback_used": false,
+          "fallback_reason": null,
+          "stage6_validation_decision": "accepted",
+          "stage7_triples_added": 12,
+          "proposed_classes": [
+            "SensorNoiseBurst"
+          ]
+        },
+        {
+          "anomaly_id": "A6",
+          "trigger_path": "confirmed",
+          "llm_seconds": 79.36960935592651,
+          "fallback_used": false,
+          "fallback_reason": null,
+          "stage6_validation_decision": "accepted",
+          "stage7_triples_added": 12,
+          "proposed_classes": [
+            "MissingSensorSegment"
+          ]
+        }
+      ]
+    }
+  ]
+}

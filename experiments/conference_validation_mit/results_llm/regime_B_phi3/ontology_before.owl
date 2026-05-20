@@ -1,0 +1,293 @@
+@prefix : <http://example.org/battery-ontology#> .
+@prefix geo1: <http://www.w3.org/2003/01/geo/wgs84_pos#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix sosa: <http://www.w3.org/ns/sosa/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://example.org/battery-ontology> a owl:Ontology ;
+    rdfs:label "Lithium-Ion Battery Anomaly Detection Ontology" ;
+    rdfs:comment "Ontology for modeling battery sensors, observations, anomalies, and failure modes using SOSA/SSN." .
+
+:BatteryModule a owl:Class ;
+    rdfs:label "Battery Module" ;
+    rdfs:comment "A module grouping multiple cells." .
+
+:InternalShortCircuit a owl:Class ;
+    rdfs:label "Internal Short Circuit" ;
+    :leadsTo :ThermalRunaway ;
+    rdfs:comment "Short circuit within the cell." ;
+    rdfs:subClassOf :FailureMode .
+
+:RejectedAnomaly a owl:Class ;
+    rdfs:label "Rejected Anomaly" ;
+    rdfs:comment "An anomaly rejected as a false positive." ;
+    rdfs:subClassOf :Anomaly .
+
+:ThermalImageObservation a owl:Class ;
+    rdfs:label "Thermal Image Observation" ;
+    rdfs:subClassOf sosa:Observation .
+
+:ValidatedAnomaly a owl:Class ;
+    rdfs:label "Validated Anomaly" ;
+    rdfs:comment "An anomaly that passed the false-positive filtering pipeline." ;
+    rdfs:subClassOf :Anomaly .
+
+:anomalyScore a owl:DatatypeProperty ;
+    rdfs:label "anomaly score" ;
+    rdfs:domain :Anomaly ;
+    rdfs:range xsd:float .
+
+:battery_pack_001 a :Battery ;
+    rdfs:label "Battery Pack 001" ;
+    :hasPart :cell_001,
+        :cell_002 .
+
+:confidenceScore a owl:DatatypeProperty ;
+    rdfs:label "confidence score" ;
+    rdfs:domain :Anomaly ;
+    rdfs:range xsd:float .
+
+:currentThreshold a owl:DatatypeProperty ;
+    rdfs:label "current threshold (A)" ;
+    rdfs:domain :Overcurrent ;
+    rdfs:range xsd:float .
+
+:detectedBy a owl:ObjectProperty ;
+    rdfs:label "detected by" ;
+    rdfs:domain :Anomaly ;
+    rdfs:range sosa:Sensor .
+
+:hasAnomaly a owl:ObjectProperty ;
+    rdfs:label "has anomaly" ;
+    rdfs:domain sosa:Observation ;
+    rdfs:range :Anomaly .
+
+:hasCause a owl:ObjectProperty ;
+    rdfs:label "has cause" ;
+    rdfs:domain :Anomaly ;
+    rdfs:range :FailureMode .
+
+:hasCondition a owl:DatatypeProperty ;
+    rdfs:domain :CausalRule ;
+    rdfs:range xsd:string .
+
+:hasLocation a owl:ObjectProperty ;
+    rdfs:label "has location" ;
+    rdfs:domain :Cell ;
+    rdfs:range geo1:Point .
+
+:hasPart a owl:ObjectProperty ;
+    rdfs:label "has part" ;
+    rdfs:domain :Battery ;
+    rdfs:range :Cell .
+
+:hasSensor a owl:ObjectProperty ;
+    rdfs:label "has sensor" ;
+    rdfs:domain :Cell ;
+    rdfs:range sosa:Sensor .
+
+:impliesFailure a owl:ObjectProperty ;
+    rdfs:domain :CausalRule ;
+    rdfs:range :FailureMode .
+
+:leadsTo a owl:ObjectProperty ;
+    rdfs:label "leads to" ;
+    rdfs:comment "Causal chain between failure modes." ;
+    rdfs:domain :FailureMode ;
+    rdfs:range :FailureMode .
+
+:obs_current_001_t1 a :CurrentObservation ;
+    sosa:hasFeatureOfInterest :cell_001 ;
+    sosa:hasSimpleResult "2.1"^^xsd:float ;
+    sosa:madeBySensor :current_sensor_001 ;
+    sosa:resultTime "2024-01-15T10:00:00+00:00"^^xsd:dateTime .
+
+:obs_current_001_t2 a :CurrentObservation ;
+    sosa:hasFeatureOfInterest :cell_001 ;
+    sosa:hasSimpleResult "8.5"^^xsd:float ;
+    sosa:madeBySensor :current_sensor_001 ;
+    sosa:resultTime "2024-01-15T10:05:00+00:00"^^xsd:dateTime .
+
+:obs_temp_001_t1 a :TemperatureObservation ;
+    sosa:hasFeatureOfInterest :cell_001 ;
+    sosa:hasSimpleResult "25.3"^^xsd:float ;
+    sosa:madeBySensor :temp_sensor_001 ;
+    sosa:resultTime "2024-01-15T10:00:00+00:00"^^xsd:dateTime .
+
+:obs_temp_001_t2 a :TemperatureObservation ;
+    sosa:hasFeatureOfInterest :cell_001 ;
+    sosa:hasSimpleResult "45.8"^^xsd:float ;
+    sosa:madeBySensor :temp_sensor_001 ;
+    sosa:resultTime "2024-01-15T10:05:00+00:00"^^xsd:dateTime .
+
+:obs_temp_001_t3 a :TemperatureObservation ;
+    sosa:hasFeatureOfInterest :cell_001 ;
+    sosa:hasSimpleResult "78.2"^^xsd:float ;
+    sosa:madeBySensor :temp_sensor_001 ;
+    sosa:resultTime "2024-01-15T10:10:00+00:00"^^xsd:dateTime .
+
+:obs_voltage_001_t1 a :VoltageObservation ;
+    sosa:hasFeatureOfInterest :cell_001 ;
+    sosa:hasSimpleResult "3.7"^^xsd:float ;
+    sosa:madeBySensor :voltage_sensor_001 ;
+    sosa:resultTime "2024-01-15T10:00:00+00:00"^^xsd:dateTime .
+
+:obs_voltage_001_t2 a :VoltageObservation ;
+    sosa:hasFeatureOfInterest :cell_001 ;
+    sosa:hasSimpleResult "4.35"^^xsd:float ;
+    sosa:madeBySensor :voltage_sensor_001 ;
+    sosa:resultTime "2024-01-15T10:05:00+00:00"^^xsd:dateTime .
+
+:rule_current_spike_overcurrent a :CausalRule ;
+    rdfs:label "Current Spike ==> Overcurrent" ;
+    :hasCondition "current_spike" ;
+    :impliesFailure :Overcurrent .
+
+:rule_temp_current_overheating a :CausalRule ;
+    rdfs:label "Temperature Rise + Current Increase ==> Overheating" ;
+    :hasCondition "temperature_rise AND current_increase" ;
+    :impliesFailure :Overheating .
+
+:rule_temp_spike_thermal_runaway a :CausalRule ;
+    rdfs:label "Rapid Temperature Spike + Overheating ==> Thermal Runaway" ;
+    :hasCondition "rapid_temperature_spike AND overheating" ;
+    :impliesFailure :ThermalRunaway .
+
+:rule_voltage_drop_overdischarge a :CausalRule ;
+    rdfs:label "Voltage Drop Below Threshold ==> Overdischarge" ;
+    :hasCondition "voltage_drop" ;
+    :impliesFailure :Overdischarge .
+
+:rule_voltage_spike_overcharge a :CausalRule ;
+    rdfs:label "Voltage Spike ==> Overcharge" ;
+    :hasCondition "voltage_spike" ;
+    :impliesFailure :Overcharge .
+
+:temperatureThreshold a owl:DatatypeProperty ;
+    rdfs:label "temperature threshold (°C)" ;
+    rdfs:domain :Overheating ;
+    rdfs:range xsd:float .
+
+:thermal_cam_001 a :ThermalCamera ;
+    rdfs:label "Thermal Camera - Module 001" .
+
+:Overcharge a owl:Class ;
+    rdfs:label "Overcharge" ;
+    :leadsTo :Overheating ;
+    rdfs:comment "Voltage exceeds safe upper limit." ;
+    rdfs:subClassOf :FailureMode .
+
+:Overdischarge a owl:Class ;
+    rdfs:label "Overdischarge" ;
+    rdfs:comment "Voltage drops below safe lower limit." ;
+    rdfs:subClassOf :FailureMode .
+
+:ThermalCamera a owl:Class ;
+    rdfs:label "Thermal Infrared Camera" ;
+    rdfs:subClassOf sosa:Sensor .
+
+:cell_002 a :Cell ;
+    rdfs:label "Cell 002" ;
+    :hasLocation :location_002 ;
+    :hasSensor :current_sensor_002,
+        :temp_sensor_002,
+        :voltage_sensor_002 .
+
+:current_sensor_002 a :CurrentSensor ;
+    rdfs:label "Current Sensor - Cell 002" .
+
+:location_001 a geo1:Point ;
+    geo1:lat "48.8566"^^xsd:float ;
+    geo1:long "2.3522"^^xsd:float .
+
+:location_002 a geo1:Point ;
+    geo1:lat "48.8567"^^xsd:float ;
+    geo1:long "2.3523"^^xsd:float .
+
+:temp_sensor_002 a :TemperatureSensor ;
+    rdfs:label "Temperature Sensor - Cell 002" .
+
+:voltage_sensor_002 a :VoltageSensor ;
+    rdfs:label "Voltage Sensor - Cell 002" .
+
+:Battery a owl:Class ;
+    rdfs:label "Battery" ;
+    rdfs:comment "A lithium-ion battery pack." .
+
+:CurrentObservation a owl:Class ;
+    rdfs:label "Current Observation" ;
+    rdfs:subClassOf sosa:Observation .
+
+:CurrentSensor a owl:Class ;
+    rdfs:label "Current Sensor" ;
+    rdfs:subClassOf sosa:Sensor .
+
+:Overcurrent a owl:Class ;
+    rdfs:label "Overcurrent" ;
+    :leadsTo :Overheating ;
+    rdfs:comment "Current exceeds safe operating range." ;
+    rdfs:subClassOf :FailureMode .
+
+:TemperatureSensor a owl:Class ;
+    rdfs:label "Temperature Sensor" ;
+    rdfs:subClassOf sosa:Sensor .
+
+:VoltageObservation a owl:Class ;
+    rdfs:label "Voltage Observation" ;
+    rdfs:subClassOf sosa:Observation .
+
+:VoltageSensor a owl:Class ;
+    rdfs:label "Voltage Sensor" ;
+    rdfs:subClassOf sosa:Sensor .
+
+:TemperatureObservation a owl:Class ;
+    rdfs:label "Temperature Observation" ;
+    rdfs:subClassOf sosa:Observation .
+
+:ThermalRunaway a owl:Class ;
+    rdfs:label "Thermal Runaway" ;
+    rdfs:comment "Self-heating chain reaction in the cell." ;
+    rdfs:subClassOf :FailureMode .
+
+:current_sensor_001 a :CurrentSensor ;
+    rdfs:label "Current Sensor - Cell 001" ;
+    sosa:observes :cell_001 .
+
+:voltage_sensor_001 a :VoltageSensor ;
+    rdfs:label "Voltage Sensor - Cell 001" ;
+    sosa:observes :cell_001 .
+
+:Overheating a owl:Class ;
+    rdfs:label "Overheating" ;
+    :leadsTo :ThermalRunaway ;
+    rdfs:comment "Cell temperature exceeds safe threshold." ;
+    rdfs:subClassOf :FailureMode .
+
+:temp_sensor_001 a :TemperatureSensor ;
+    rdfs:label "Temperature Sensor - Cell 001" ;
+    sosa:observes :cell_001 .
+
+:Cell a owl:Class ;
+    rdfs:label "Cell" ;
+    rdfs:comment "An individual cell within a battery pack." .
+
+:Anomaly a owl:Class ;
+    rdfs:label "Anomaly" ;
+    rdfs:comment "A detected anomalous condition." .
+
+:CausalRule a owl:Class ;
+    rdfs:label "Causal Rule" ;
+    rdfs:comment "A rule mapping observation patterns to failure modes." .
+
+:FailureMode a owl:Class ;
+    rdfs:label "Failure Mode" ;
+    rdfs:comment "A known battery failure mode." .
+
+:cell_001 a :Cell ;
+    rdfs:label "Cell 001" ;
+    :hasLocation :location_001 ;
+    :hasSensor :current_sensor_001,
+        :temp_sensor_001,
+        :voltage_sensor_001 .
+

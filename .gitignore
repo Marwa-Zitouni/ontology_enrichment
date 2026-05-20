@@ -1,0 +1,36 @@
+# Byte-compiled / cache
+__pycache__/
+*.py[cod]
+*.egg-info/
+.pytest_cache/
+.mypy_cache/
+.ipynb_checkpoints/
+
+# Virtual envs
+.venv/
+venv/
+env/
+
+# Editor / OS
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+
+# Local secrets / env
+.env
+.env.*
+*.key
+
+# Logs and ad-hoc outputs
+*.log
+output/
+runs/
+
+# Large model / data artefacts not tracked here
+*.pt
+*.pth
+*.bin
+*.safetensors
+*.h5
+*.parquet

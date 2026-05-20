@@ -1,0 +1,120 @@
+You are an expert in lithium-ion battery safety, anomaly diagnosis, and ontology engineering.
+
+A time-series anomaly has been detected in a lithium-ion battery dataset. The existing ontology may not contain the most appropriate fine-grained concept needed to describe this anomaly.
+
+Your task is to propose possible ontology enrichments based only on the anomaly evidence and the existing ontology vocabulary.
+
+Do NOT assume that a new class is always required.
+Do NOT duplicate an existing class.
+Do NOT invent relations if an existing relation is sufficient.
+Do NOT simply repeat the broad failure mode already matched by the rule engine.
+
+## Anomaly Evidence
+
+- Candidate ID: A2
+- Anomaly ID, if available: A2
+- Cell: MIT_b1_cell002
+- Cycle: 1044
+- Reconstruction error: 0.01249
+- Normalised confidence: 0.51
+- Affected channel(s): temperature, voltage
+- Observed patterns: temperature_rise, voltage_drop
+- Stage-4 semantic match: Overdischarge
+- Stage-4 status: confirmed
+- Signal statistics:
+  - temperature: unit=C, mean=35.401, min=31.2, max=48.662, std=4.561, second_half_minus_first_half_mean=4.3
+  - current: unit=A, mean=-0.063, min=-4.001, max=3.6, std=2.898, second_half_minus_first_half_mean=-4.742
+  - voltage: unit=V, mean=3.171, min=2.5, max=3.6, std=0.398, second_half_minus_first_half_mean=-0.3
+- Short description of anomalous segment: temperature spans 31.20-48.66 C (mean 35.40, half-to-half delta +4.30 C); current spans -4.00-3.60 A (mean -0.06, std 2.90); voltage spans 2.50-3.60 V (mean 3.17, std 0.40). Rule-engine patterns observed: temperature_rise, voltage_drop.
+
+## Existing Ontology Vocabulary
+
+Existing classes:
+Anomaly, Battery, BatteryModule, CausalRule, Cell, CurrentObservation, CurrentSensor, FailureMode, InternalShortCircuit, Overcharge, Overcurrent, Overdischarge, Overheating, RejectedAnomaly, TemperatureObservation, TemperatureSensor, ThermalCamera, ThermalImageObservation, ThermalRunaway, ValidatedAnomaly, VoltageObservation, VoltageSensor
+
+Existing subclasses of FailureMode:
+Internal Short Circuit, Overcharge, Overcurrent, Overdischarge, Overheating, Thermal Runaway
+
+Existing object properties:
+detectedBy, hasAnomaly, hasCause, hasLocation, hasPart, hasSensor, impliesFailure, leadsTo
+
+Existing datatype properties:
+anomalyScore, confidenceScore, currentThreshold, hasCondition, temperatureThreshold
+
+Known semantic rules:
+Current Spike ==> Overcurrent, Rapid Temperature Spike + Overheating ==> Thermal Runaway, Temperature Rise + Current Increase ==> Overheating, Voltage Drop Below Threshold ==> Overdischarge, Voltage Spike ==> Overcharge
+
+## Task
+
+Based on the anomaly evidence, propose one of the following:
+
+1. No ontology update is needed because the anomaly is already covered by existing classes.
+2. One or more new fine-grained classes should be added.
+3. One or more new relations between existing or proposed classes should be added.
+4. The evidence is too weak or ambiguous, so the proposal should be rejected or sent to human review.
+
+For each proposed class:
+- use a valid PascalCase class name;
+- select an existing ontology class as parent;
+- provide a human-readable label;
+- provide a one-sentence rdfs:comment;
+- cite the evidence that supports the proposal;
+- give a confidence score between 0 and 1;
+- explain why the class is not a duplicate of an existing class.
+
+For each proposed relation:
+- use only an existing object property;
+- ensure the subject and object are existing classes or proposed classes;
+- give a confidence score between 0 and 1;
+- justify the relation using the anomaly evidence.
+
+## Output Format
+
+Return STRICT JSON ONLY.
+Do NOT use Markdown fences.
+Do NOT include comments.
+Do NOT include trailing commas.
+Do NOT add explanatory text outside the JSON.
+
+Use exactly this schema:
+
+{
+  "update_needed": true,
+  "decision": "add|skip_existing|reject_uncertain|human_review",
+  "candidate_new_classes": [
+    {
+      "class_name": "<PascalCaseClassName>",
+      "parent_class": "<ExistingOntologyClass>",
+      "label": "<Human-readable label>",
+      "comment": "<one-sentence ontology comment>",
+      "evidence": ["<evidence item 1>", "<evidence item 2>"],
+      "confidence": 0.0,
+      "justification": "<why this class is needed and why existing classes are insufficient>"
+    }
+  ],
+  "candidate_new_relationships": [
+    {
+      "subject": "<CandidateOrExistingClass>",
+      "predicate": "<ExistingObjectProperty>",
+      "object": "<CandidateOrExistingClass>",
+      "evidence": ["<evidence item 1>"],
+      "confidence": 0.0,
+      "justification": "<why this relation is supported>"
+    }
+  ],
+  "duplicate_risk": [
+    {
+      "candidate": "<CandidateClassName>",
+      "similar_existing_class": "<ExistingClassName>",
+      "risk": "low|medium|high",
+      "reason": "<why this may or may not be a duplicate>"
+    }
+  ],
+  "rejected_candidates": [
+    {
+      "class_name": "<RejectedClassName>",
+      "reason": "<why this candidate should not be inserted>"
+    }
+  ],
+  "human_review_note": "<short note explaining what a human reviewer should verify>"
+}

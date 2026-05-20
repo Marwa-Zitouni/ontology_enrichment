@@ -1,0 +1,63 @@
+{
+  "llm_key": "phi3",
+  "llm_name": "Phi-3-mini-4k-instruct",
+  "llm_model_id": "microsoft/Phi-3-mini-4k-instruct",
+  "device": "cpu",
+  "regime": "Regime B (permissive)",
+  "regime_key": "B",
+  "seed": 0,
+  "llm_load_seconds": 1.190765142440796,
+  "regime_total_seconds": 578.1333396434784,
+  "regime_summary": {
+    "regime": "Regime B (permissive)",
+    "threshold_percentile": 50,
+    "threshold": 0.012016472406685352,
+    "confidence_threshold": 0.2,
+    "temporal_k": 1,
+    "temporal_n": 3,
+    "n_total_windows": 80,
+    "n_normal": 73,
+    "n_anomalous": 7,
+    "n_predicted_anomaly": 40,
+    "metrics_pre_filter": {
+      "TP": 3,
+      "FP": 37,
+      "FN": 4,
+      "TN": 36,
+      "precision": 0.075,
+      "recall": 0.42857142857142855,
+      "F1": 0.1276595744680851
+    },
+    "metrics": {
+      "TP": 3,
+      "FP": 37,
+      "FN": 4,
+      "TN": 36,
+      "precision": 0.075,
+      "recall": 0.42857142857142855,
+      "F1": 0.1276595744680851
+    },
+    "metrics_post_stage3": {
+      "TP": 3,
+      "FP": 37,
+      "FN": 4,
+      "TN": 36,
+      "precision": 0.075,
+      "recall": 0.42857142857142855,
+      "F1": 0.1276595744680851
+    },
+    "n_candidates_post_stage3_validated": 40,
+    "n_stage5_calls": 3,
+    "n_stage7_triples_added_total": 36
+  },
+  "ontology_diff_summary": {
+    "n_added": 15,
+    "added_classes": [
+      "http://example.org/battery-ontology#AbnormalTemperatureRise",
+      "http://example.org/battery-ontology#MissingSensorSegment",
+      "http://example.org/battery-ontology#SensorNoiseBurst"
+    ],
+    "added_object_properties": [],
+    "added_datatype_properties": []
+  }
+}

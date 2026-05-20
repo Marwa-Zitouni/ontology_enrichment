@@ -1,0 +1,123 @@
+{
+  "epochs": 60,
+  "seed": 0,
+  "use_real_llm": true,
+  "n_train_normal": 73,
+  "seq_len": 50,
+  "input_channels": 3,
+  "n_params": 19603,
+  "regimes": {
+    "A": {
+      "name": "Regime A (conservative)",
+      "threshold_percentile": 95,
+      "confidence_threshold": 0.55,
+      "temporal_k": 2,
+      "temporal_n": 3,
+      "out_dir": "regime_A_conservative"
+    },
+    "B": {
+      "name": "Regime B (permissive)",
+      "threshold_percentile": 50,
+      "confidence_threshold": 0.2,
+      "temporal_k": 1,
+      "temporal_n": 3,
+      "out_dir": "regime_B_permissive"
+    }
+  },
+  "regime_summaries": {
+    "A": {
+      "regime": "Regime A (conservative)",
+      "threshold_percentile": 95,
+      "threshold": 0.015278482809662819,
+      "confidence_threshold": 0.55,
+      "temporal_k": 2,
+      "temporal_n": 3,
+      "n_total_windows": 80,
+      "n_normal": 73,
+      "n_anomalous": 7,
+      "n_predicted_anomaly": 4,
+      "metrics_pre_filter": {
+        "TP": 0,
+        "FP": 4,
+        "FN": 7,
+        "TN": 69,
+        "precision": 0.0,
+        "recall": 0.0,
+        "F1": 0.0
+      },
+      "metrics": {
+        "TP": 0,
+        "FP": 4,
+        "FN": 7,
+        "TN": 69,
+        "precision": 0.0,
+        "recall": 0.0,
+        "F1": 0.0
+      },
+      "metrics_post_stage3": {
+        "TP": 0,
+        "FP": 1,
+        "FN": 7,
+        "TN": 72,
+        "precision": 0.0,
+        "recall": 0.0,
+        "F1": 0.0
+      },
+      "n_candidates_post_stage3_validated": 1,
+      "n_stage5_calls": 0,
+      "n_stage7_triples_added_total": 0
+    },
+    "B": {
+      "regime": "Regime B (permissive)",
+      "threshold_percentile": 50,
+      "threshold": 0.012016472406685352,
+      "confidence_threshold": 0.2,
+      "temporal_k": 1,
+      "temporal_n": 3,
+      "n_total_windows": 80,
+      "n_normal": 73,
+      "n_anomalous": 7,
+      "n_predicted_anomaly": 40,
+      "metrics_pre_filter": {
+        "TP": 3,
+        "FP": 37,
+        "FN": 4,
+        "TN": 36,
+        "precision": 0.075,
+        "recall": 0.42857142857142855,
+        "F1": 0.1276595744680851
+      },
+      "metrics": {
+        "TP": 3,
+        "FP": 37,
+        "FN": 4,
+        "TN": 36,
+        "precision": 0.075,
+        "recall": 0.42857142857142855,
+        "F1": 0.1276595744680851
+      },
+      "metrics_post_stage3": {
+        "TP": 3,
+        "FP": 37,
+        "FN": 4,
+        "TN": 36,
+        "precision": 0.075,
+        "recall": 0.42857142857142855,
+        "F1": 0.1276595744680851
+      },
+      "n_candidates_post_stage3_validated": 40,
+      "n_stage5_calls": 3,
+      "n_stage7_triples_added_total": 36
+    }
+  },
+  "ontology_diff_summary": {
+    "n_added": 15,
+    "added_classes": [
+      "http://example.org/battery-ontology#AbnormalTemperatureRise",
+      "http://example.org/battery-ontology#MissingSensorSegment",
+      "http://example.org/battery-ontology#SensorNoiseBurst"
+    ],
+    "added_object_properties": [],
+    "added_datatype_properties": []
+  }
+}

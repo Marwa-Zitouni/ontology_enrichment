@@ -1,0 +1,75 @@
+{
+  "n_added": 16,
+  "n_removed": 0,
+  "added_classes": [
+    "http://example.org/battery-ontology#MissingSensorSegment",
+    "http://example.org/battery-ontology#Overvoltage_anomaly",
+    "http://example.org/battery-ontology#SensorNoiseBurst"
+  ],
+  "added_object_properties": [],
+  "added_datatype_properties": [],
+  "added_subclass_axioms": [
+    {
+      "subject": "http://example.org/battery-ontology#Overvoltage_anomaly",
+      "object": "http://example.org/battery-ontology#Overcharge"
+    },
+    {
+      "subject": "http://example.org/battery-ontology#SensorNoiseBurst",
+      "object": "http://example.org/battery-ontology#FailureMode"
+    },
+    {
+      "subject": "http://example.org/battery-ontology#MissingSensorSegment",
+      "object": "http://example.org/battery-ontology#FailureMode"
+    }
+  ],
+  "added_label_axioms": [
+    {
+      "subject": "http://example.org/battery-ontology#MissingSensorSegment",
+      "label": "Missing Sensor Segment"
+    },
+    {
+      "subject": "http://example.org/battery-ontology#Overvoltage_anomaly",
+      "label": "A2"
+    },
+    {
+      "subject": "http://example.org/battery-ontology#SensorNoiseBurst",
+      "label": "Sensor Noise Burst"
+    }
+  ],
+  "added_leadsTo_axioms": [
+    {
+      "from": "http://example.org/battery-ontology#SensorNoiseBurst",
+      "to": "http://example.org/battery-ontology#Overdischarge"
+    },
+    {
+      "from": "http://example.org/battery-ontology#MissingSensorSegment",
+      "to": "http://example.org/battery-ontology#Overdischarge"
+    },
+    {
+      "from": "http://example.org/battery-ontology#Overvoltage_anomaly",
+      "to": "http://example.org/battery-ontology#Cell"
+    }
+  ],
+  "added_other_axioms": [
+    {
+      "subject": "http://example.org/battery-ontology#SensorNoiseBurst",
+      "predicate": "http://www.w3.org/2000/01/rdf-schema#comment",
+      "object": "A fine-grained anomaly subtype characterized by a transient burst of high-frequency noise on a sensor channel, typically indicating a loose harness contact or instrumentation glitch."
+    },
+    {
+      "subject": "http://example.org/battery-ontology#MissingSensorSegment",
+      "predicate": "http://www.w3.org/2000/01/rdf-schema#comment",
+      "object": "A fine-grained anomaly subtype characterized by a contiguous gap in telemetry from a sensor channel, typically indicating a sensor dropout or BMS communication loss."
+    },
+    {
+      "subject": "http://example.org/battery-ontology#Overvoltage_anomaly",
+      "predicate": "http://www.w3.org/2000/01/rdf-schema#comment",
+      "object": "This anomaly is characterized by voltage exceeding the nominal value."
+    },
+    {
+      "subject": "http://example.org/battery-ontology#Overvoltage_anomaly",
+      "predicate": "http://example.org/battery-ontology#hasLocation",
+      "object": "http://example.org/battery-ontology#Cell"
+    }
+  ]
+}

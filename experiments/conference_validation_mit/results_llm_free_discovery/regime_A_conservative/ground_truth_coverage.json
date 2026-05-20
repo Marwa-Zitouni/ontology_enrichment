@@ -1,0 +1,100 @@
+[
+  {
+    "anomaly_id": "A1",
+    "n_windows": 1,
+    "indices": [
+      63
+    ],
+    "max_score": 0.011210574768483639,
+    "threshold": 0.015278482809662819,
+    "any_threshold_crossed": false,
+    "any_validated": false,
+    "stage4_reasoning": "stage not activated",
+    "patterns_observed": [],
+    "failure_modes": []
+  },
+  {
+    "anomaly_id": "A2",
+    "n_windows": 1,
+    "indices": [
+      28
+    ],
+    "max_score": 0.012492592446506023,
+    "threshold": 0.015278482809662819,
+    "any_threshold_crossed": false,
+    "any_validated": false,
+    "stage4_reasoning": "stage not activated",
+    "patterns_observed": [],
+    "failure_modes": []
+  },
+  {
+    "anomaly_id": "A3",
+    "n_windows": 1,
+    "indices": [
+      6
+    ],
+    "max_score": 0.011992252431809902,
+    "threshold": 0.015278482809662819,
+    "any_threshold_crossed": false,
+    "any_validated": false,
+    "stage4_reasoning": "stage not activated",
+    "patterns_observed": [],
+    "failure_modes": []
+  },
+  {
+    "anomaly_id": "A4",
+    "n_windows": 1,
+    "indices": [
+      37
+    ],
+    "max_score": 0.012586231343448162,
+    "threshold": 0.015278482809662819,
+    "any_threshold_crossed": false,
+    "any_validated": false,
+    "stage4_reasoning": "stage not activated",
+    "patterns_observed": [],
+    "failure_modes": []
+  },
+  {
+    "anomaly_id": "A5",
+    "n_windows": 1,
+    "indices": [
+      13
+    ],
+    "max_score": 0.011969336308538914,
+    "threshold": 0.015278482809662819,
+    "any_threshold_crossed": false,
+    "any_validated": false,
+    "stage4_reasoning": "stage not activated",
+    "patterns_observed": [],
+    "failure_modes": []
+  },
+  {
+    "anomaly_id": "A6",
+    "n_windows": 1,
+    "indices": [
+      49
+    ],
+    "max_score": 0.012495317496359348,
+    "threshold": 0.015278482809662819,
+    "any_threshold_crossed": false,
+    "any_validated": false,
+    "stage4_reasoning": "stage not activated",
+    "patterns_observed": [],
+    "failure_modes": []
+  },
+  {
+    "anomaly_id": "A7",
+    "n_windows": 1,
+    "indices": [
+      2
+    ],
+    "max_score": 0.011396845802664757,
+    "threshold": 0.015278482809662819,
+    "any_threshold_crossed": false,
+    "any_validated": false,
+    "stage4_reasoning": "stage not activated",
+    "patterns_observed": [],
+    "failure_modes": []
+  }
+]

@@ -1,0 +1,71 @@
+{
+  "n_added": 14,
+  "n_removed": 0,
+  "added_classes": [
+    "http://example.org/battery-ontology#AnomalyDuringTemperatureRise",
+    "http://example.org/battery-ontology#VoltageDropAnomaly"
+  ],
+  "added_object_properties": [],
+  "added_datatype_properties": [],
+  "added_subclass_axioms": [
+    {
+      "subject": "http://example.org/battery-ontology#VoltageDropAnomaly",
+      "object": "http://example.org/battery-ontology#Anomaly"
+    },
+    {
+      "subject": "http://example.org/battery-ontology#AnomalyDuringTemperatureRise",
+      "object": "http://example.org/battery-ontology#Anomaly"
+    }
+  ],
+  "added_label_axioms": [
+    {
+      "subject": "http://example.org/battery-ontology#VoltageDropAnomaly",
+      "label": "Anomaly related to significant voltage drop in battery cells"
+    },
+    {
+      "subject": "http://example.org/battery-ontology#AnomalyDuringTemperatureRise",
+      "label": "Anomaly class for temperature rise detected in battery during charging or discharging"
+    },
+    {
+      "subject": "http://example.org/battery-ontology#VoltageDropAnomaly",
+      "label": "Anomaly specifically describing voltage drop condition in lithium-ion batteries"
+    }
+  ],
+  "added_leadsTo_axioms": [
+    {
+      "from": "http://example.org/battery-ontology#VoltageDropAnomaly",
+      "to": "http://example.org/battery-ontology#Overdischarge"
+    },
+    {
+      "from": "http://example.org/battery-ontology#AnomalyDuringTemperatureRise",
+      "to": "http://example.org/battery-ontology#TemperatureObservation"
+    }
+  ],
+  "added_other_axioms": [
+    {
+      "subject": "http://example.org/battery-ontology#VoltageDropAnomaly",
+      "predicate": "http://example.org/battery-ontology#hasCause",
+      "object": "http://example.org/battery-ontology#Overdischarge"
+    },
+    {
+      "subject": "http://example.org/battery-ontology#AnomalyDuringTemperatureRise",
+      "predicate": "http://www.w3.org/2000/01/rdf-schema#comment",
+      "object": "To capture anomalies that involve a temperature rise during specific battery operation conditions."
+    },
+    {
+      "subject": "http://example.org/battery-ontology#VoltageDropAnomaly",
+      "predicate": "http://www.w3.org/2000/01/rdf-schema#comment",
+      "object": "To better classify and address anomalies related to voltage drops"
+    },
+    {
+      "subject": "http://example.org/battery-ontology#AnomalyDuringTemperatureRise",
+      "predicate": "http://example.org/battery-ontology#hasCondition",
+      "object": "http://example.org/battery-ontology#TemperatureObservation"
+    },
+    {
+      "subject": "http://example.org/battery-ontology#VoltageDropAnomaly",
+      "predicate": "http://www.w3.org/2000/01/rdf-schema#comment",
+      "object": "Specific instance of voltage anomaly with observed voltage drop pattern."
+    }
+  ]
+}

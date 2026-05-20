@@ -1,0 +1,8 @@
+anomaly_id,type,cell_id,cycle,step_start,step_end,variables,severity,expected_detect,interpretation
+A1,sudden_voltage_drop,MIT_b1_cell006,213,40,55,V,moderate,True,Step-like potential drop consistent with a partial internal short or sudden contact-resistance increase; should trigger Stage 4 'internal_short' axiom path.
+A2,abnormal_temperature_rise,MIT_b1_cell002,1044,30,70,T,high,True,Localised thermal excursion exceeding +18 °C above the nominal 30 °C chamber baseline; consistent with incipient thermal-runaway precursor. Stage 4 should match 'thermal_runaway_precursor' axiom.
+A3,current_spike,MIT_b1_cell000,792,50,50,I,moderate,False,"Single-sample current impulse ~35% beyond the cell's natural 4 C envelope. Likely sensor glitch or cycler relay artefact; Stage 3 temporal k-of-n filter should reject as a one-off, hence may NOT be flagged."
+A4,sensor_noise_burst,MIT_b1_cell003,952,20,35,V,low,False,Transient voltage-sense noise burst (e.g. loose harness contact). Should be filtered out by the Stage 3 confidence + temporal-consistency gates.
+A5,thermal_drift,MIT_b1_cell001,394,0,99,T,moderate,True,Slow monotonic temperature drift consistent with a miscalibrated thermocouple or partial loss of thermal contact. Should be flagged as a temporal trend anomaly.
+A6,missing_sensor_segment,MIT_b1_cell004,1224,60,80,T,low,True,"Contiguous gap in temperature telemetry (sensor dropout or BMS comm. loss). Pipeline must handle missingness explicitly; if not, Stage 2 reconstruction error will spike."
+A7,capacity_inconsistency,MIT_b1_cell000,266,70,99,Qd,high,True,Sudden discharge-capacity drop of 0.4 Ah within a single cycle (≈36% of nominal). Inconsistent with any monotonic-fade model; suggests coulomb-counting fault or step change in active material.

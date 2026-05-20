@@ -1,0 +1,16 @@
+{
+  "before": {
+    "consistent_lightweight": true,
+    "missing_subclass_targets": [],
+    "missing_leadsTo_targets": [],
+    "duplicate_labels": [],
+    "n_triples": 226
+  },
+  "after": {
+    "consistent_lightweight": true,
+    "missing_subclass_targets": [],
+    "missing_leadsTo_targets": [],
+    "duplicate_labels": [],
+    "n_triples": 226
+  }
+}

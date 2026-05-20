@@ -1,0 +1,24 @@
+{
+  "before": {
+    "consistent_lightweight": true,
+    "missing_subclass_targets": [],
+    "missing_leadsTo_targets": [],
+    "duplicate_labels": [],
+    "n_triples": 226
+  },
+  "after": {
+    "consistent_lightweight": true,
+    "missing_subclass_targets": [],
+    "missing_leadsTo_targets": [],
+    "duplicate_labels": [
+      {
+        "subject": "http://example.org/battery-ontology#VoltageDropAnomaly",
+        "labels": [
+          "Anomaly related to significant voltage drop in battery cells",
+          "Anomaly specifically describing voltage drop condition in lithium-ion batteries"
+        ]
+      }
+    ],
+    "n_triples": 240
+  }
+}

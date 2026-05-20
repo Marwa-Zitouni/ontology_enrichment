@@ -1,0 +1,126 @@
+[
+  {
+    "sample_idx": 59,
+    "anomaly_id": "",
+    "anomaly_type": "normal",
+    "injection_subtype": "",
+    "is_anomaly_gt": false,
+    "cell_id": "MIT_b1_cell005",
+    "cycle": 1071,
+    "raw_score": 0.016388921067118645,
+    "normalized_score": 0.5363399386405945,
+    "threshold": 0.015278482809662819,
+    "threshold_crossed": true,
+    "confidence_gate": {
+      "passed": false,
+      "reason": "Score 0.5363 < 0.55 \u2014 rejected"
+    },
+    "temporal_consistency": {},
+    "semantic_cross_validation": {},
+    "patterns_observed": [
+      "voltage_drop"
+    ],
+    "stage3_decision": "rejected",
+    "stage4_reasoning": "rejected",
+    "failure_modes": []
+  },
+  {
+    "sample_idx": 69,
+    "anomaly_id": "",
+    "anomaly_type": "normal",
+    "injection_subtype": "",
+    "is_anomaly_gt": false,
+    "cell_id": "MIT_b1_cell006",
+    "cycle": 633,
+    "raw_score": 0.01712990179657936,
+    "normalized_score": 0.560589075088501,
+    "threshold": 0.015278482809662819,
+    "threshold_crossed": true,
+    "confidence_gate": {
+      "passed": true,
+      "reason": "Score 0.5606 >= 0.55"
+    },
+    "temporal_consistency": {
+      "passed": false,
+      "reason": "Anomaly in 1/2 windows (need 2/3)",
+      "count": 1
+    },
+    "semantic_cross_validation": {},
+    "patterns_observed": [
+      "voltage_drop"
+    ],
+    "stage3_decision": "rejected",
+    "stage4_reasoning": "rejected",
+    "failure_modes": []
+  },
+  {
+    "sample_idx": 78,
+    "anomaly_id": "",
+    "anomaly_type": "normal",
+    "injection_subtype": "",
+    "is_anomaly_gt": false,
+    "cell_id": "MIT_b1_cell007",
+    "cycle": 771,
+    "raw_score": 0.015469932928681374,
+    "normalized_score": 0.5062653422355652,
+    "threshold": 0.015278482809662819,
+    "threshold_crossed": true,
+    "confidence_gate": {
+      "passed": false,
+      "reason": "Score 0.5063 < 0.55 \u2014 rejected"
+    },
+    "temporal_consistency": {},
+    "semantic_cross_validation": {},
+    "patterns_observed": [
+      "voltage_drop"
+    ],
+    "stage3_decision": "rejected",
+    "stage4_reasoning": "rejected",
+    "failure_modes": []
+  },
+  {
+    "sample_idx": 79,
+    "anomaly_id": "",
+    "anomaly_type": "normal",
+    "injection_subtype": "",
+    "is_anomaly_gt": false,
+    "cell_id": "MIT_b1_cell007",
+    "cycle": 867,
+    "raw_score": 0.017076725140213966,
+    "normalized_score": 0.5588488578796387,
+    "threshold": 0.015278482809662819,
+    "threshold_crossed": true,
+    "confidence_gate": {
+      "passed": true,
+      "reason": "Score 0.5588 >= 0.55"
+    },
+    "temporal_consistency": {
+      "passed": true,
+      "reason": "Anomaly in 2/3 windows (need 2/3)",
+      "count": 2
+    },
+    "semantic_cross_validation": {
+      "passed": true,
+      "reason": "Semantically validated \u2014 rules: ['Voltage Drop Below Threshold ==> Overdischarge'], failures: ['Overdischarge']",
+      "matched_rules": [
+        {
+          "rule": "Voltage Drop Below Threshold ==> Overdischarge",
+          "matched_conditions": [
+            "voltage_drop"
+          ],
+          "implied_failure": "Overdischarge",
+          "failure_uri": "http://example.org/battery-ontology#Overdischarge"
+        }
+      ]
+    },
+    "patterns_observed": [
+      "voltage_drop"
+    ],
+    "stage3_decision": "validated",
+    "stage4_reasoning": "confirmed",
+    "failure_modes": [
+      "Overdischarge"
+    ],
+    "stage5_decision": "skipped_existing"
+  }
+]
